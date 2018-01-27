@@ -2625,8 +2625,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204411976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41377488, y: 0.016113758, z: 0.049850196}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalPosition: {x: -0.4031, y: -0.0291, z: 0.049850196}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 803409540}
   m_RootOrder: 6
@@ -11952,7 +11952,7 @@ GameObject:
   - component: {fileID: 1178006964}
   m_Layer: 0
   m_Name: Downtown Line
-  m_TagString: GameController
+  m_TagString: DowntownLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

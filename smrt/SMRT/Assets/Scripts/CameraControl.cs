@@ -18,20 +18,32 @@ public class CameraControl : MonoBehaviour
 	private float m_ZoomSpeed;                      // Reference speed for the smooth damping of the orthographic size.
 	private Vector3 m_MoveVelocity;                 // Reference velocity for the smooth damping of the position.
 	private Vector3 m_DesiredPosition;              // The position the camera is moving towards. It will be average of all m_Targets positions
+	private Vector3 m_MousePosition;
+	public float m_MouseFollowSpeed = 0.1f;
 
 	private void Awake ()
 	{
 		m_Camera = GetComponentInChildren<Camera> ();
+		m_DesiredPosition = transform.position;
 	}
 
 
 	private void FixedUpdate ()
 	{
+        Vector2 mousePos = new Vector2();
+
+        // Get the mouse position from Event.
+        // Note that the y position from Event is inverted.
+        mousePos.x = Input.mousePosition.x;
+        mousePos.y = m_Camera.pixelHeight - Input.mousePosition.y;
+
+        Vector3 p = m_Camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
+
+		DebugDisplay.Log ("Screen mouse pos: " + Input.mousePosition.ToString());
+		DebugDisplay.Log ("World mouse pos: " + p.ToString());
+
 		// Move the camera towards a desired position.
 		Move ();
-
-		// Change the size of the camera based.
-		Zoom ();
 	}
 
 
@@ -40,10 +52,24 @@ public class CameraControl : MonoBehaviour
 		if(!m_Follow)
 			return;
 		// Find the average position of the targets.
-		FindAveragePosition ();
+		//FindAveragePosition ();
+		FindMousePosition();
 
 		// Smoothly transition to that position.
  		transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime);
+	}
+
+	void FindMousePosition () {
+        if (Input.GetMouseButton(1)) {
+            m_MousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
+			m_DesiredPosition = Vector2.Lerp(m_DesiredPosition, m_MousePosition, m_MouseFollowSpeed);
+
+        }
+    }
+
+	void UpdateMouseScroll()
+	{
+		
 	}
 
 
@@ -76,73 +102,5 @@ public class CameraControl : MonoBehaviour
 
 		// The desired position is the average position;
 		m_DesiredPosition = averagePos;
-	}
-
-
-	private void Zoom ()
-	{
-		if (!m_UseZoom)
-			return;
-		
-		// If Camera is not orthographic don't modify zoom
-		if (m_Camera.orthographic) {
-			// Find the required size based on the desired position and smoothly transition to that size.
-			float requiredSize = FindRequiredSize ();
-			m_Camera.orthographicSize = Mathf.SmoothDamp (m_Camera.orthographicSize, requiredSize, ref m_ZoomSpeed, m_DampTime);
-		}
-	}
-
-
-	private float FindRequiredSize ()
-	{
-		// Find the position the camera rig is moving towards in its local space.
-		Vector3 desiredLocalPos = transform.InverseTransformPoint(m_DesiredPosition);
-
-		// Start the camera's size calculation at zero.
-		float size = 0f;
-
-		// Go through all the targets...
-		for (int i = 0; i < m_Targets.Length; i++)
-		{
-			if (m_Targets [i] == null)
-				continue;
-			
-			// ... and if they aren't active continue on to the next target.
-			if (!m_Targets[i].gameObject.activeSelf)
-				continue;
-
-			// Otherwise, find the position of the target in the camera's local space.
-			Vector3 targetLocalPos = transform.InverseTransformPoint(m_Targets[i].position);
-
-			// Find the position of the target from the desired position of the camera's local space.
-			Vector3 desiredPosToTarget = targetLocalPos - desiredLocalPos;
-
-			// Choose the largest out of the current size and the distance of the entity 'up' or 'down' from the camera.
-			size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.y));
-
-			// Choose the largest out of the current size and the calculated size based on the entity being to the left or right of the camera.
-			size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.x) / m_Camera.aspect);
-		}
-
-		// Add the edge buffer to the size.
-		size += m_ScreenEdgeBuffer;
-
-		// Make sure the camera's size isn't below the minimum.
-		size = Mathf.Max (size, m_MinSize);
-
-		return size;
-	}
-
-
-	public void SetStartPositionAndSize ()
-	{
-		// Find the desired position.
-		FindAveragePosition ();
-
-		// Set the camera's position to the desired position without damping.
-		transform.position = m_DesiredPosition;
-
-		// Find and set the required size of the camera.
-		m_Camera.orthographicSize = FindRequiredSize ();
 	}
 }

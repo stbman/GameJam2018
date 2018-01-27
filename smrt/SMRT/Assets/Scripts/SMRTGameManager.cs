@@ -7,7 +7,7 @@ public class SMRTGameManager : MonoBehaviour {
 	[Header("Gameplay")]
 	public string m_MainMenuLevel;
 	public float m_ScorePerSuccess = 1.0f;
-	private CameraControl m_CameraController;
+	public float m_DaysDuration = 30.0f;
 	private int m_Days = 0;
 	private int m_HighScoreDays = 0;
 
@@ -16,15 +16,17 @@ public class SMRTGameManager : MonoBehaviour {
 	public Text m_HappinessIndexText;
 	public Text m_MoneyText;
 	public Text m_GameOverText;
+	public Text m_DaysText;
 	private float m_HappinessIndex;
 	private float m_Money;
 
 	// GameMode
-	[Header("Starting Timer")]
+	[Header("Timer")]
 	public Text m_StartingTimerText;
+	public Text m_DaysTimerText;
 	public float m_StartingTimeDuration = 3.0f;
 	public Timer m_StartingTimer; // Count down timer to the start of game
-
+	public Timer m_DaysTimer; // Count down timer to end of day
 	// Sound
 	[Header("Sound")]
 	public AudioSource m_InGameBackgroundMusic;
@@ -41,8 +43,6 @@ public class SMRTGameManager : MonoBehaviour {
 	private bool m_LevelStarted = false;
 	// Use this for initialization
 	void Start () {
-		GameObject cameraRig = GameObject.FindGameObjectWithTag ("CameraRig");
-		m_CameraController = cameraRig.GetComponent<CameraControl> ();
 
 		Init();
 	}
@@ -69,6 +69,7 @@ public class SMRTGameManager : MonoBehaviour {
 		m_IsGameOver = false;
 		SetUITextSafely(m_StartingTimerText, "");
 		SetUITextSafely(m_GameOverText, "");
+		m_DaysTimer.StartTimer(m_DaysDuration);
 	}
 
 	void GameOver()
@@ -147,11 +148,23 @@ public class SMRTGameManager : MonoBehaviour {
 		{
 			SetUITextSafely(m_StartingTimerText, Mathf.Round(m_StartingTimer.GetTimeLeft()).ToString());
 		}
+
+		if(m_DaysTimer.IsElapsed())
+		{
+			m_Days++;
+			m_DaysTimer.StartTimer(m_DaysDuration);
+		}
+
+		if(!m_DaysTimer.IsElapsed())
+		{
+			SetUITextSafely(m_DaysTimerText, "Time Left: " + Mathf.Round(m_DaysTimer.GetTimeLeft()).ToString());
+		}
 	}
 
 	void UpdateUI()
 	{
 		SetUITextSafely(m_HappinessIndexText, m_HappinessIndex.ToString());
-		SetUITextSafely(m_MoneyText, m_Money.ToString());
+		SetUITextSafely(m_MoneyText, "$ " + m_Money.ToString());
+		SetUITextSafely(m_DaysText, "Day: " + m_Days.ToString());
 	}
 }

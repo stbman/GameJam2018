@@ -2231,6 +2231,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173129567}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &176977686 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1922914136934648, guid: 53e475fb589a9354c8c93bec58248db5,
+    type: 2}
+  m_PrefabInternal: {fileID: 498313161}
 --- !u!1 &180609541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2736,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4955,12 +4960,41 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224684591237994176, guid: 53e475fb589a9354c8c93bec58248db5,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.30910808
+      objectReference: {fileID: 0}
+    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.17783095
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969688021054918, guid: 53e475fb589a9354c8c93bec58248db5,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922914136934648, guid: 53e475fb589a9354c8c93bec58248db5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53e475fb589a9354c8c93bec58248db5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &498313162 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1922914136934648, guid: 53e475fb589a9354c8c93bec58248db5,
+  m_PrefabParentObject: {fileID: 1042088562465780, guid: 53e475fb589a9354c8c93bec58248db5,
     type: 2}
   m_PrefabInternal: {fileID: 498313161}
 --- !u!1 &499274279
@@ -19447,11 +19481,6 @@ Prefab:
       objectReference: {fileID: 1830124418}
     - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
         type: 2}
-      propertyPath: m_StartingTimerTextPanel
-      value: 
-      objectReference: {fileID: 498313162}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
       propertyPath: m_StartingTimerText
       value: 
       objectReference: {fileID: 954698484}
@@ -19460,6 +19489,16 @@ Prefab:
       propertyPath: m_DaysTimerText
       value: 
       objectReference: {fileID: 1300622862}
+    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
+        type: 2}
+      propertyPath: m_StartingTimerPanel
+      value: 
+      objectReference: {fileID: 498313162}
+    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
+        type: 2}
+      propertyPath: m_GameOverPanel
+      value: 
+      objectReference: {fileID: 176977686}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb130a10050fd4b4fbfc1e05da59c097, type: 2}
   m_IsPrefabParent: 0

@@ -17,6 +17,7 @@ public class SMRTGameManager : MonoBehaviour {
 	public Text m_MoneyText;
 	public Text m_GameOverText;
 	public Text m_DaysText;
+	public GameObject m_StartingTimerTextPanel;
 	private float m_HappinessIndex;
 	private float m_Money;
 
@@ -53,6 +54,7 @@ public class SMRTGameManager : MonoBehaviour {
 		m_Money = 0.0f;
 		m_Days = 0;
 		m_StartingTimer.StartTimer(m_StartingTimeDuration);
+		m_StartingTimerTextPanel.active = true;
 	}
 
 	void RestartLevel()
@@ -71,6 +73,7 @@ public class SMRTGameManager : MonoBehaviour {
 		SetUITextSafely(m_StartingTimerText, "");
 		SetUITextSafely(m_GameOverText, "");
 		m_DaysTimer.StartTimer(m_DaysDuration);
+		m_StartingTimerTextPanel.active = false;
 	}
 
 	void GameOver()

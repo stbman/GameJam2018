@@ -73,6 +73,7 @@ MonoBehaviour:
   m_MoneyText: {fileID: 0}
   m_GameOverText: {fileID: 0}
   m_DaysText: {fileID: 0}
+  m_StartingTimerTextPanel: {fileID: 0}
   m_StartingTimerText: {fileID: 0}
   m_DaysTimerText: {fileID: 0}
   m_StartingTimeDuration: 3

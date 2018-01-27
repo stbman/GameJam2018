@@ -10,6 +10,14 @@ TagManager:
   - GreenLineChangi
   - CircleLine
   - CircleLineDhoby
+  - PurpleLine
+  - DowntownLine
+  - DowntownLineDowntown
+  - PTCE
+  - PTCW
+  - STCE
+  - STCW
+  - BPLRT
   layers:
   - Default
   - TransparentFX

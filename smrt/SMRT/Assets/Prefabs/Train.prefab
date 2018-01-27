@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RouteTag: 
-  m_TrainSpeed: 10
-  m_TimeToWaitInStation: 10
+  m_TrainSpeed: 0.1
+  m_TimeToWaitInStation: 1
   m_CurrentStationIndex: 0
   m_IncreaseToNextStation: 1

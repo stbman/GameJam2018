@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: DowntownLine
-  m_MaxTrain: 20
+  m_MaxTrain: 27
   m_TrainSpeedd: 0.1
 --- !u!4 &204411980
 Transform:
@@ -4507,8 +4507,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: CircleLineDhoby
-  m_MaxTrain: 20
-  m_TrainSpeedd: 0.1
+  m_MaxTrain: 2
+  m_TrainSpeedd: 0.2
 --- !u!4 &436299535
 Transform:
   m_ObjectHideFlags: 0
@@ -6611,7 +6611,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: PTCE
-  m_MaxTrain: 20
+  m_MaxTrain: 3
   m_TrainSpeedd: 0.1
 --- !u!4 &688767950
 Transform:
@@ -6851,7 +6851,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: CircleLine
-  m_MaxTrain: 20
+  m_MaxTrain: 25
   m_TrainSpeedd: 0.1
 --- !u!4 &723451862
 Transform:
@@ -8383,8 +8383,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: GreenLine
-  m_MaxTrain: 20
-  m_TrainSpeedd: 0.1
+  m_MaxTrain: 25
+  m_TrainSpeedd: 0.2
 --- !u!4 &890212288
 Transform:
   m_ObjectHideFlags: 0
@@ -9544,7 +9544,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: PurpleLine
-  m_MaxTrain: 20
+  m_MaxTrain: 27
   m_TrainSpeedd: 0.1
 --- !u!4 &977028572
 Transform:
@@ -11568,7 +11568,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: RedLine
-  m_MaxTrain: 20
+  m_MaxTrain: 27
   m_TrainSpeedd: 0.1
 --- !u!4 &1163882550
 Transform:
@@ -13308,7 +13308,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: STCE
-  m_MaxTrain: 20
+  m_MaxTrain: 3
   m_TrainSpeedd: 0.1
 --- !u!4 &1334896781
 Transform:
@@ -16578,8 +16578,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: GreenLineChangi
-  m_MaxTrain: 20
-  m_TrainSpeedd: 0.1
+  m_MaxTrain: 2
+  m_TrainSpeedd: 0.3
 --- !u!4 &1581888012
 Transform:
   m_ObjectHideFlags: 0
@@ -18952,8 +18952,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: BPLRT
-  m_MaxTrain: 20
-  m_TrainSpeedd: 0.1
+  m_MaxTrain: 5
+  m_TrainSpeedd: 0.3
 --- !u!4 &1800462952
 Transform:
   m_ObjectHideFlags: 0
@@ -19198,8 +19198,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: STCW
-  m_MaxTrain: 20
-  m_TrainSpeedd: 0.1
+  m_MaxTrain: 3
+  m_TrainSpeedd: 0.3
 --- !u!4 &1859952970
 Transform:
   m_ObjectHideFlags: 0
@@ -20417,7 +20417,7 @@ MonoBehaviour:
   m_MinSpawnCooldown: 1
   m_MaxSpawnCooldown: 1
   m_RouteTag: PTCW
-  m_MaxTrain: 20
+  m_MaxTrain: 3
   m_TrainSpeedd: 0.1
 --- !u!4 &1944894112
 Transform:

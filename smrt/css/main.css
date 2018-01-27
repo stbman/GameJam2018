@@ -1,4 +1,12 @@
 #mrt-img{
-	width:900px;
-	height:630px;
+	width:1000px;
+	height:700px;
+}
+
+#train-bar {
+    height: 50%;
+}
+
+#money-bar {
+    height: 50%;
 }

@@ -1,3 +1,5 @@
+var allTrainLists = [];
+
 var stationList = [
 
     {"id":"NS4/BP1"      , "coords":"165,147,6" , "alt":"Choa Chu Kang"},

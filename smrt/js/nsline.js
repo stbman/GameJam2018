@@ -28,3 +28,5 @@ var nsline = [
     {"id":"NS28"         , "coords":"480,588,6" , "alt":"Marina South Pier"}
 
 ]
+
+allTrainLists.push(nsline);

@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    generateRandomLine();
 	
     for (var i = 0; i < stationList.length; i++) {
         var train = stationList[i];

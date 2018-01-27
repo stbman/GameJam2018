@@ -12,12 +12,12 @@ TagManager:
   - CircleLineDhoby
   - PurpleLine
   - DowntownLine
-  - DowntownLineDowntown
   - PTCE
   - PTCW
   - STCE
   - STCW
   - BPLRT
+  - NotAStation
   layers:
   - Default
   - TransparentFX

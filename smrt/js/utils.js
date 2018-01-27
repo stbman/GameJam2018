@@ -6,4 +6,5 @@ function generateRandomNumber(min, max) {
 
 function generateRandomLine() {
     var num = generateRandomNumber(0, allTrainLists.length);
+    return allTrainLists[num];
 }

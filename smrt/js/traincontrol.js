@@ -1,9 +1,5 @@
-// Train control file
-
-var trainsDeployed = [];
-
 // Dummy object 
-var trainInMotion = {
+var dummyTrain = {
     "id": 0,
     "stationNow": [],
     "stationNext": [],
@@ -11,25 +7,32 @@ var trainInMotion = {
     "breakdown": false
 }
 
-// TODO: Add levels? 
-var numOfTrains = 10;
+// Called in main.js
+function createRandomTrains(numOfTrains) {
+    var listOfRandomTrains = [];
 
-function createRandomTrains() {
     for (var i = 0; i < numOfTrains; i++) {
-        var randomTrain = {
-            "id": i,
-            "breakdown": false
-        };
+        var randomTrain = createTrain;
 
-        randomTrain["travelDelta"] = 0;
-
-        randomLine = generateRandomLine();
-        randomStationIdx = generateRandomNumber(0, randomLine.length);
-
-        randomTrain["stationNow"] = randomLine[randomStationIdx];
-        randomTrain["stationNext"] = randomLine[randomStationIdx + 1];
-
-        trainsDeployed.push(randomTrain);
-       
+        listOfRandomTrains.push(randomTrain);
     }
+    console.log(listOfRandomTrains)
+    return listOfRandomTrains;
+}
+
+function createTrain() {
+    var randomTrain = {
+        "id": i,
+        "breakdown": false
+    };
+
+    randomTrain["travelDelta"] = 0;
+
+    randomLine = generateRandomLine();
+    randomStationIdx = generateRandomNumber(0, randomLine.length);
+
+    randomTrain["stationNow"] = randomLine[randomStationIdx];
+    randomTrain["stationNext"] = randomLine[randomStationIdx + 1];
+
+    return randomTrain;
 }

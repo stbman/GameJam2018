@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+	<title>Game Jam</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+
+</head>
+
+<body>
+
+<img src="img/mrt-map-DT.jpg" id="mrt-img" usemap="#mrtmap">
+
+<map id="mrtmap">
+        <!--Interchange-->
+        <area class="mrt-map-area" id="NS4/BP1" shape="circle" coords="165,147,6" href="#" alt="Choa Chu Kang">        
+        <area class="mrt-map-area" id="NS17/CC15" shape="circle" coords="495,226,9" href="#" alt="Bishan">        
+        <area class="mrt-map-area" id="NS24/NE6/CC1" shape="circle" href="#" coords="448,378,11" alt="Dhoby Ghaut">        
+        <area class="mrt-map-area" id="NS27/CE2" shape="circle" coords="457,567,9" href="#" alt="Marina Bay">
+        <area class="mrt-map-area" id="NE1/CC29" shape="circle" coords="262,567,6" href="#" alt="HarbourFront">
+        <area class="mrt-map-area" id="NE4/DT19" shape="circle" coords="386,445,9" href="#" alt="Chinatown">
+        <area class="mrt-map-area" id="NE12/CC13" shape="circle" coords="563,222,9" href="#" alt="Serangoon">
+        <area class="mrt-map-area" id="NE16/STC" shape="circle" coords="622,139,6" href="#" alt="Sengkang">
+        <area class="mrt-map-area" id="NE17/PTC" shape="circle" coords="676,88,6" href="#" alt="Punggol">
+        <area class="mrt-map-area" id="EW8/CC9" shape="circle" coords="648,335,9" href="#" alt="Paya Lebar">
+        <area class="mrt-map-area" id="EW12/DT14" shape="circle" coords="547,406,9" href="#" alt="Bugis">
+        <area class="mrt-map-area" id="EW13/NS25" shape="circle" coords="485,470,6" href="#" alt="City Hall">        
+        <area class="mrt-map-area" id="EW14/NS26" shape="circle" coords="472,483,6" href="#" alt="Raffles Place">
+        <area class="mrt-map-area" id="EW16/NE3" shape="circle" coords="360,465,9" href="#" alt="Outram Park">                
+        <area class="mrt-map-area" id="EW24/NS1" shape="circle" coords="170,315,6" href="#" alt="Jurong East">      
+        <area class="mrt-map-area" id="CE1/DT16" shape="circle" coords="520,503,6" href="#" alt="Bayfront">
+        <area class="mrt-map-area" id="CC4/DT15" shape="circle" coords="560,460,6" href="#" alt="Promenade">
+        <area class="mrt-map-area" id="CC22/EW21" shape="circle" coords="259,366,9" href="#" alt="Buona Vista">        
+        <area class="mrt-map-area" id="DT1/BP6" shape="circle" coords="276,147,4" href="#" alt="Bukit Panjang">
+        <area class="mrt-map-area" id="NE7/DT12" shape="circle" coords="482,340,9" href="#" alt="Little India">        
+        <area class="mrt-map-area" id="NS21/DT11" shape="circle" coords="440,307,8" href="#" alt="Newton">
+        <area class="mrt-map-area" id="CC19/DT9" shape="circle" coords="357,272,6" href="#" alt="Botanic Gardens"> 
+       	<area class="mrt-map-area" id="CG1/DT35" shape="circle" coords="805,370,6" href="#" alt="Expo">    
+       	<area class="mrt-map-area" id="CC10/DT26" shape="circle" coords="623,265,6" href="#" alt="MacPherson">
+        <!--Green Line-->
+        <area class="mrt-map-area" id="EW33" shape="circle" coords="37,157,6" href="#" alt="Tuas Link">
+        <area class="mrt-map-area" id="EW32" shape="circle" coords="38,184,6" href="#" alt="Tuas West Road">
+        <area class="mrt-map-area" id="EW31" shape="circle" coords="38,210,6" href="#" alt="Tuas Crescent">
+        <area class="mrt-map-area" id="EW30" shape="circle" coords="38,235,6" href="#" alt="Gul Circle">
+        <area class="mrt-map-area" id="EW29" shape="circle" coords="38,260,6" href="#" alt="Joo Koon">
+        <area class="mrt-map-area" id="EW28" shape="circle" coords="38,286,6" href="#" alt="Pioneer">
+        <area class="mrt-map-area" id="EW27" shape="circle" coords="66,314,6" href="#" alt="Boon Lay">
+        <area class="mrt-map-area" id="EW26" shape="circle" coords="100,312,7" href="#" alt="Lakeside">
+        <area class="mrt-map-area" id="EW25" shape="circle" coords="133,313,6" href="#" alt="Chinese Garden">
+        <area class="mrt-map-area" id="EW23" shape="circle" coords="220,318,5" href="#" alt="Clementi">
+        <area class="mrt-map-area" id="EW22" shape="circle" coords="235,342,6" href="#" alt="Dover">
+        <area class="mrt-map-area" id="EW20" shape="circle" coords="278,385,6" href="#" alt="Commonwealth">
+        <area class="mrt-map-area" id="EW19" shape="circle" coords="295,403,6" href="#" alt="Queenstown">
+        <area class="mrt-map-area" id="EW18" shape="circle" coords="315,421,6" href="#" alt="Redhill">
+        <area class="mrt-map-area" id="EW17" shape="circle" coords="334,441,6" href="#" alt="Tiong Bahru">
+        <area class="mrt-map-area" id="EW15" shape="circle" coords="400,508,6" href="#" alt="Tanjong Pagar">
+        <area class="mrt-map-area" id="EW11" shape="circle" coords="565,384,6" href="#" alt="Lavender">
+        <area class="mrt-map-area" id="EW10" shape="circle" coords="584,369,6" href="#" alt="Kallang">
+        <area class="mrt-map-area" id="EW9" shape="circle" coords="604,346,6" href="#" alt="Aljunied">
+        <area class="mrt-map-area" id="EW7" shape="circle" coords="680,335,6" href="#" alt="Eunos">
+        <area class="mrt-map-area" id="EW6" shape="circle" coords="703,333,6" href="#" alt="Kembangan">
+        <area class="mrt-map-area" id="EW5" shape="circle" coords="739,335,6" href="#" alt="Bedok">
+        <area class="mrt-map-area" id="EW4" shape="circle" coords="770,335,6" href="#" alt="Tanah Merah">
+        <area class="mrt-map-area" id="EW3" shape="circle" coords="797,298,6" href="#" alt="Simei">
+        <area class="mrt-map-area" id="EW2" shape="circle" coords="797,274,6" href="#" alt="Tampines">
+        <area class="mrt-map-area" id="EW1" shape="circle" coords="798,215,6" href="#" alt="Pasir Ris">
+        <area class="mrt-map-area" id="CG2" shape="circle" coords="847,369,6" href="#" alt="Changi Airport">
+        <!--Red Line-->
+        <area class="mrt-map-area" id="NS2" shape="circle" coords="163,257,6" href="#" alt="Bukit Batok">
+        <area class="mrt-map-area" id="NS3" shape="circle" coords="163,202,6" href="#" alt="Bukit Gombak">
+        <area class="mrt-map-area" id="NS5" shape="circle" coords="163,93,6" href="#" alt="Yew Tee">
+        <area class="mrt-map-area" id="NS7" shape="circle" coords="203,72,6" href="#" alt="Kranji">
+        <area class="mrt-map-area" id="NS8" shape="circle" coords="265,73,6" href="#" alt="Marsiling">
+        <area class="mrt-map-area" id="NS9" shape="circle" coords="334,71,6" href="#" alt="Woodlands">
+        <area class="mrt-map-area" id="NS10" shape="circle" coords="393,71,6" href="#" alt="Admiralty">
+        <area class="mrt-map-area" id="NS11" shape="circle" coords="454,71,6" href="#" alt="Sembawang">
+        <!--<area class="mrt-map-area" id="NS13" shape="circle" coords="488,98,6" href="#" alt="Yishun">-->
+        <area class="mrt-map-area" id="NS14" shape="circle" coords="488,126,6" href="#" alt="Khatib">
+        <area class="mrt-map-area" id="NS15" shape="circle" coords="488,157,6" href="#" alt="Yio Chu Kang">
+        <area class="mrt-map-area" id="NS16" shape="circle" coords="488,188,6" href="#" alt="Ang Mo Kio">
+        <area class="mrt-map-area" id="NS18" shape="circle" coords="488,241,6" href="#" alt="Braddell">
+        <area class="mrt-map-area" id="NS19" shape="circle" coords="475,265,6" href="#" alt="Toa Payoh">
+        <area class="mrt-map-area" id="NS20" shape="circle" coords="455,285,6" href="#" alt="Novena">
+        <area class="mrt-map-area" id="NS22" shape="circle" coords="413,337,7" href="#" alt="Orchard">
+        <area class="mrt-map-area" id="NS23" shape="circle" coords="422,358,6" href="#" alt="Somerset">
+        <area class="mrt-map-area" id="NS28" shape="circle" coords="480,588,6" href="#" alt="Marina South Pier">
+        <!--Purple Line-->
+        <area class="mrt-map-area" id="NE5" shape="circle" coords="418,408,6" href="#" alt="Clarke Quay">
+        <area class="mrt-map-area" id="NE8" shape="circle" coords="497,324,6" href="#" alt="Farrer Park">
+        <area class="mrt-map-area" id="NE9" shape="circle" coords="523,300,6" href="#" alt="Boon Keng">
+        <area class="mrt-map-area" id="NE10" shape="circle" coords="540,281,6" href="#" alt="Potong Pasir">
+        <area class="mrt-map-area" id="NE11" shape="circle" coords="559,255,6" href="#" alt="Woodleigh">
+        <area class="mrt-map-area" id="NE13" shape="circle" coords="572,194,7" href="#" alt="Kovan">
+        <area class="mrt-map-area" id="NE14" shape="circle" coords="590,174,6" href="#" alt="Hougang">
+        <area class="mrt-map-area" id="NE15" shape="circle" coords="605,158,6" href="#" alt="Buangkok">
+        <!--Circle Line-->
+        <area class="mrt-map-area" id="CC2" shape="circle" coords="497,419,6" href="#" alt="Bras Basah">
+        <area class="mrt-map-area" id="CC3" shape="circle" coords="520,446,6" href="#" alt="Esplanade">
+        <area class="mrt-map-area" id="CC5" shape="circle" coords="594,428,6" href="#" alt="Nicoll Highway">
+        <area class="mrt-map-area" id="CC6" shape="circle" coords="616,407,6" href="#" alt="Stadium">
+        <area class="mrt-map-area" id="CC7" shape="circle" coords="636,384,6" href="#" alt="Mountbatten">
+        <area class="mrt-map-area" id="CC8" shape="circle" coords="651,357,6" href="#" alt="Dakota">
+        <area class="mrt-map-area" id="CC11" shape="circle" coords="607,250,6" href="#" alt="Tai Seng">
+        <area class="mrt-map-area" id="CC12" shape="circle" coords="593,235,6" href="#" alt="Bartley">
+        <area class="mrt-map-area" id="CC14" shape="circle" coords="529,224,6" href="#" alt="Lorong Chuan">
+        <area class="mrt-map-area" id="CC16" shape="circle" coords="428,223,6" href="#" alt="Marymount">
+        <area class="mrt-map-area" id="CC17" shape="circle" coords="382,242,6" href="#" alt="Caldecott">
+        <area class="mrt-map-area" id="CC20" shape="circle" coords="315,307,6" href="#" alt="Farrer Road">
+        <area class="mrt-map-area" id="CC21" shape="circle" coords="287,336,6" href="#" alt="Holland Village">
+        <area class="mrt-map-area" id="CC23" shape="circle" coords="235,390,7" href="#" alt="one-north">
+        <area class="mrt-map-area" id="CC24" shape="circle" coords="215,413,6" href="#" alt="Kent Ridge">
+        <area class="mrt-map-area" id="CC25" shape="circle" coords="201,447,6" href="#" alt="Haw Par Villa">
+        <area class="mrt-map-area" id="CC26" shape="circle" coords="201,478,6" href="#" alt="Pasir Panjang">
+        <area class="mrt-map-area" id="CC27" shape="circle" coords="213,514,6" href="#" alt="Labrador Park">
+        <area class="mrt-map-area" id="CC28" shape="circle" coords="236,537,6" href="#" alt="Telok Blangah">
+        <!--Down Town Line-->
+        <area class="mrt-map-area" id="DT17" shape="circle" coords="466,522,6" href="#" alt="Down Town">
+        <area class="mrt-map-area" id="DT18" shape="circle" coords="431,487,6" href="#" alt="Telok Ayer">
+        <area class="mrt-map-area" id="DT13" shape="circle" coords="499,358,6" href="#" alt="Rochor">
+        <area class="mrt-map-area" id="DT10" shape="circle" coords="399,272,6" href="#" alt="Stevens">
+        <area class="mrt-map-area" id="DT8" shape="circle" coords="319,272,6" href="#" alt="Tan Kah Kee">
+        <area class="mrt-map-area" id="DT7" shape="circle" coords="286,262,6" href="#" alt="Sixth Avenue">
+        <area class="mrt-map-area" id="DT6" shape="circle" coords="277,235,6" href="#" alt="King Albert Park">
+        <area class="mrt-map-area" id="DT5" shape="circle" coords="277,212,6" href="#" alt="Beauty World">
+        <area class="mrt-map-area" id="DT3" shape="circle" coords="277,192,6" href="#" alt="Hill View">
+        <area class="mrt-map-area" id="DT2" shape="circle" coords="277,172,6" href="#" alt="Cashew">
+       	<area class="mrt-map-area" id="DT34" shape="circle" coords="813,336,6" href="#" alt="Upper Changi">
+       	<area class="mrt-map-area" id="DT33" shape="circle" coords="813,310,6" href="#" alt="Tampines East">
+       	<area class="mrt-map-area" id="DT32" shape="circle" coords="813,274,6" href="#" alt="Tampines">
+       	<area class="mrt-map-area" id="DT31" shape="circle" coords="765,247,6" href="#" alt="Tampines West">
+       	<area class="mrt-map-area" id="DT30" shape="circle" coords="738,247,6" href="#" alt="Bedok Reservoir">
+       	<area class="mrt-map-area" id="DT29" shape="circle" coords="712,247,6" href="#" alt="Bedok North">
+       	<area class="mrt-map-area" id="DT28" shape="circle" coords="685,247,6" href="#" alt="Kaki Bukit">
+       	<area class="mrt-map-area" id="DT27" shape="circle" coords="657,247,6" href="#" alt="Ubi">
+       	<area class="mrt-map-area" id="DT25" shape="circle" coords="601,285,6" href="#" alt="Mattar">
+       	<area class="mrt-map-area" id="DT24" shape="circle" coords="579,307,6" href="#" alt="Geylang Bahru">
+       	<area class="mrt-map-area" id="DT23" shape="circle" coords="559,328,6" href="#" alt="Bendemeer">
+       	<area class="mrt-map-area" id="DT22" shape="circle" coords="539,350,6" href="#" alt="Jalan Besar">
+       	<area class="mrt-map-area" id="DT21" shape="circle" coords="502,388,6" href="#" alt="Bencoolen">
+       	<area class="mrt-map-area" id="DT20" shape="circle" coords="386,408,6" href="#" alt="Fort Canning">
+        <!--LRT BP Line-->
+        <area class="mrt-map-area" id="BP2" shape="circle" coords="195,147,4" href="#" alt="South View">
+        <area class="mrt-map-area" id="BP3" shape="circle" coords="212,147,4" href="#" alt="Keat Hong">
+        <area class="mrt-map-area" id="BP4" shape="circle" coords="230,147,4" href="#" alt="Teck Whye">
+        <area class="mrt-map-area" id="BP5" shape="circle" coords="247,147,4" href="#" alt="Phoenix">
+        <area class="mrt-map-area" id="BP14" shape="circle" coords="258,116,4" href="#" alt="Ten Mile Junction">
+        <area class="mrt-map-area" id="BP7" shape="circle" coords="306,154,4" href="#" alt="Petir">
+        <area class="mrt-map-area" id="BP8" shape="circle" coords="326,164,4" href="#" alt="Pending">
+        <area class="mrt-map-area" id="BP9" shape="circle" coords="348,164,4" href="#" alt="Bangkit">
+        <area class="mrt-map-area" id="BP10" shape="circle" coords="359,145,4" href="#" alt="Fajar">
+        <area class="mrt-map-area" id="BP11" shape="circle" coords="348,129,4" href="#" alt="Segar">
+        <area class="mrt-map-area" id="BP12" shape="circle" coords="325,129,4" href="#" alt="Jelapang">
+        <area class="mrt-map-area" id="BP13" shape="circle" coords="307,138,4" href="#" alt="Senja">
+        <!--LRT PE Line-->
+        <area class="mrt-map-area" id="PE1" shape="circle" coords="692,119,4" href="#" alt="Cove">
+        <area class="mrt-map-area" id="PE2" shape="circle" coords="700,132,4" href="#" alt="Meridian">
+        <area class="mrt-map-area" id="PE3" shape="circle" coords="712,147,4" href="#" alt="Coral Edge">
+        <area class="mrt-map-area" id="PE4" shape="circle" coords="730,144,4" href="#" alt="Riviera">
+        <area class="mrt-map-area" id="PE5" shape="circle" coords="733,123,4" href="#" alt="Kadaloor">
+        <area class="mrt-map-area" id="PE6" shape="circle" coords="720,109,4" href="#" alt="Oasis">
+        <area class="mrt-map-area" id="PE7" shape="circle" coords="703,105,4" href="#" alt="Damai">
+        <!--LRT PW Line-->
+        <area class="mrt-map-area" id="PW1" shape="circle" coords="659,48,4" href="#" alt="Sam Kee">
+        <area class="mrt-map-area" id="PW3" shape="circle" coords="627,25,6" href="#" alt="Punggol Point">
+        <area class="mrt-map-area" id="PW4" shape="circle" coords="616,36,4" href="#" alt="Samudera">
+        <area class="mrt-map-area" id="PW5" shape="circle" coords="618,50,4" href="#" alt="Nibong">
+        <area class="mrt-map-area" id="PW6" shape="circle" coords="628,63,4" href="#" alt="Sumang">
+        <area class="mrt-map-area" id="PW7" shape="circle" coords="647,71,4" href="#" alt="Soo Teck">
+        <!--LRT SE Line-->
+        <area class="mrt-map-area" id="SE1" shape="circle" coords="664,161,4" href="#" alt="Compassvale">
+        <area class="mrt-map-area" id="SE2" shape="circle" coords="678,175,4" href="#" alt="Rumbia">
+        <area class="mrt-map-area" id="SE3" shape="circle" coords="677,195,4" href="#" alt="Bakau">
+        <area class="mrt-map-area" id="SE4" shape="circle" coords="655,197,4" href="#" alt="Kangkar">
+        <area class="mrt-map-area" id="SE5" shape="circle" coords="643,183,4" href="#" alt="Ranggung">
+        <!--LRT SW Line-->
+        <area class="mrt-map-area" id="SW1" shape="circle" coords="604,111,4" href="#" alt="Cheng Lim">
+        <area class="mrt-map-area" id="SW2" shape="circle" coords="598,93,4" href="#" alt="Farmway">
+        <area class="mrt-map-area" id="SW3" shape="circle" coords="587,81,4" href="#" alt="Kupang">
+        <area class="mrt-map-area" id="SW4" shape="circle" coords="570,75,4" href="#" alt="Thanggam">
+        <area class="mrt-map-area" id="SW5" shape="circle" coords="559,86,4" href="#" alt="Fernvale">
+        <area class="mrt-map-area" id="SW6" shape="circle" coords="563,101,4" href="#" alt="Layar">
+        <area class="mrt-map-area" id="SW7" shape="circle" coords="573,112,4" href="#" alt="Tongkang">
+        <area class="mrt-map-area" id="SW8" shape="circle" coords="593,121,4" href="#" alt="Renjong">
+    </map>
+
+</body>
+
+</html>

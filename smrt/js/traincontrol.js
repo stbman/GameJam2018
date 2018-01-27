@@ -12,17 +12,16 @@ function createRandomTrains(numOfTrains) {
     var listOfRandomTrains = [];
 
     for (var i = 0; i < numOfTrains; i++) {
-        var randomTrain = createTrain;
+        var randomTrain = createTrain(i);
 
         listOfRandomTrains.push(randomTrain);
     }
-    console.log(listOfRandomTrains)
     return listOfRandomTrains;
 }
 
-function createTrain() {
+function createTrain(idx) {
     var randomTrain = {
-        "id": i,
+        "id": idx,
         "breakdown": false
     };
 
@@ -30,6 +29,8 @@ function createTrain() {
 
     randomLine = generateRandomLine();
     randomStationIdx = generateRandomNumber(0, randomLine.length);
+
+    console.log(randomLine);
 
     randomTrain["stationNow"] = randomLine[randomStationIdx];
     randomTrain["stationNext"] = randomLine[randomStationIdx + 1];

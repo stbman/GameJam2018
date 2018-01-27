@@ -3,7 +3,6 @@ $(document).ready(function () {
     appendTrainMap();
 
     var listOfRandomTrains = createRandomTrains(10);
-    console.log(listOfRandomTrains)
     createTrainTable(listOfRandomTrains);
 	
 	$("#map-container").click(function (event) {
@@ -35,17 +34,18 @@ function appendTrainMap() {
 }
 
 function createTrainTable(listOfRandomTrains) {
+    console.log(listOfRandomTrains)
     var trainBarId = "#train-list";
     $(trainBarId).html("");
 
     var trainHTML = "";
-    for (var i=0; i<listOfRandomTrains; i++) {
+    for (var i = 0; i < listOfRandomTrains.length; i++) {
         var trainObject = "";
         trainObject = 
             "<div class=\"row\" id=\"train-object\">" +
-            "<div class=\"col-sm\">" + listOfRandomTrains[i]
+            "<div class=\"col-sm\">" + i + 
             "</div>" +
-            "<div class=\"col-sm\">" + listOfRandomTrains["stationNow"]["alt"]
+            "<div class=\"col-sm\">" + listOfRandomTrains[i]["stationNow"]["id"] + 
             "</div>" +
             "<div class=\"col-sm\">" + "A TRAIN HERE"
             "</div>" +

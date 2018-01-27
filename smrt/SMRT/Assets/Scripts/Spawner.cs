@@ -6,9 +6,11 @@ public class Spawner : MonoBehaviour {
     public float m_MinSpawnCooldown;
     public float m_MaxSpawnCooldown;
     public string m_RouteTag;
+    public int m_MaxTrain = 20;
 
     private Timer m_Timer;
     private bool m_Collided;
+    private int m_SpawnedTrain = 0;
     // Use this for initialization
     void Awake () {
     }
@@ -18,6 +20,7 @@ public class Spawner : MonoBehaviour {
         m_Timer = GetComponent<Timer>();
         m_Timer.StartTimer(Random.Range(m_MinSpawnCooldown, m_MaxSpawnCooldown));
         m_Collided = false;
+        m_SpawnedTrain = 0;
     }
 
     public void ResetSpawner()
@@ -31,13 +34,15 @@ public class Spawner : MonoBehaviour {
 
         
         if(     m_Timer.IsElapsed()
-            && !m_Collided)
+            && !m_Collided
+            && m_SpawnedTrain <= m_MaxTrain)
         {
             GameObject newTrain = Instantiate(m_Prefab, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
             Train trainLogic = newTrain.GetComponent<Train>();
             if (trainLogic)
             {
                 trainLogic.m_RouteTag = m_RouteTag;
+                ++m_SpawnedTrain;
             }
 
             m_Timer.StartTimer(Random.Range(m_MinSpawnCooldown, m_MaxSpawnCooldown));

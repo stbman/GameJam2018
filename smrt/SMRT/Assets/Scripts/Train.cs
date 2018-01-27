@@ -5,7 +5,7 @@ using UnityEngine;
 public class Train : MonoBehaviour {
 
     public string m_RouteTag;
-    public float m_TrainSpeed = 5.0f;
+    public float m_TrainSpeed = 1.0f;
     public float m_TimeToWaitInStation = 0.0f;
     public int m_CurrentStationIndex = 0;
     public bool m_IncreaseToNextStation = true;
@@ -138,6 +138,12 @@ public class Train : MonoBehaviour {
 
     private Vector4 GetCurrentStation()
     {
+        if (m_CurrentStationIndex < 0
+            || m_CurrentStationIndex > m_RouteComp.m_WayPoint.Length)
+        {
+            int i = 0;
+            int x = i + 10;
+        }
         return m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
     }
 

@@ -168,8 +168,8 @@ public class Train : MonoBehaviour {
         Quaternion rotation = Quaternion.LookRotation(lookAt);
         Vector3 upVec = new Vector3(0.0f, 0.0f, 1.0f);
         Vector3 rightVec = Vector3.Cross(upVec, lookAt.normalized) *0.02f;
-        Vector4 offSet = new Vector4(rightVec.x, rightVec.y, rightVec.z, 0.0f);
-        gameObject.transform.position = position + offSet;
-        gameObject.transform.rotation = rotation;
+        Vector3 v3Position = position;
+        gameObject.transform.position = (gameObject.transform.position * 0.9f) + ((v3Position + rightVec) * 0.1f);
+        gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rotation, 0.1f);
     }
 }

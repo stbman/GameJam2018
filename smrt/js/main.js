@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    generateRandomLine();
 	
 	for (var i=0; i<trainList.length; i++) {
 		var train = trainList[i];

@@ -40,7 +40,7 @@ public class SMRTGameManager : MonoBehaviour {
 	public bool m_IsGameOver;
 	public bool m_IsRestarting = false;
 	// Gameflow 
-	private bool m_LevelStarted = false;
+	public bool m_LevelStarted = false;
 	// Use this for initialization
 	void Start () {
 
@@ -59,6 +59,7 @@ public class SMRTGameManager : MonoBehaviour {
 	{
 		m_IsRestarting = true;
 		m_LevelStarted = false;
+		SetUITextSafely(m_GameOverText, "");
 		Init();
 	}
 

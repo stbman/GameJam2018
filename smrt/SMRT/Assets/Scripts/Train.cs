@@ -37,6 +37,11 @@ public class Train : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
+        if(m_GameManager && (!m_GameManager.m_LevelStarted || m_GameManager.m_IsGameOver))
+        {
+            return;
+        }
+        
         Vector4 goToVec        = GetGoToVector();
 
         float totalDistance = goToVec.magnitude;

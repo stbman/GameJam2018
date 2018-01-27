@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour {
     private Timer m_Timer;
     private bool m_Collided;
     private int m_SpawnedTrain = 0;
+    private SMRTGameManager m_GameManager;
     // Use this for initialization
     void Awake () {
     }
@@ -22,6 +23,7 @@ public class Spawner : MonoBehaviour {
         m_Timer.StartTimer(Random.Range(m_MinSpawnCooldown, m_MaxSpawnCooldown));
         m_Collided = false;
         m_SpawnedTrain = 0;
+        m_GameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SMRTGameManager>();
     }
 
     public void ResetSpawner()
@@ -32,7 +34,10 @@ public class Spawner : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-
+        if(m_GameManager && (!m_GameManager.m_LevelStarted || m_GameManager.m_IsGameOver))
+        {
+            return;
+        }
         
         if(     m_Timer.IsElapsed()
             && !m_Collided

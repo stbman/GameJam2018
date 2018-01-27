@@ -85,6 +85,7 @@ MonoBehaviour:
   m_WinText: {fileID: 0}
   m_IsGameOver: 0
   m_IsRestarting: 0
+  m_LevelStarted: 0
 --- !u!114 &114584080125315218
 MonoBehaviour:
   m_ObjectHideFlags: 1

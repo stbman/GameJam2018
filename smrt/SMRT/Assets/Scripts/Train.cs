@@ -22,10 +22,10 @@ public class Train : MonoBehaviour {
 
         m_DistanceTravelled = 0.0f;
         m_TimeInStation = 0.0f;
-        m_CurrentStationIndex = 2;
+        m_CurrentStationIndex = 1;
         m_IncreaseToNextStation = false;
 
-        UpdateTrain(GetCurrentStation(), Quaternion.LookRotation(GetGoToVector()));
+        UpdateTrain(GetCurrentStation(), GetGoToVector());
     }
     
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class Train : MonoBehaviour {
                 m_DistanceTravelled = totalDistance;
             }
 
-            UpdateTrain(GetCurrentStation() + (goToVec.normalized * m_DistanceTravelled), Quaternion.LookRotation(goToVec));
+            UpdateTrain(GetCurrentStation() + (goToVec.normalized * m_DistanceTravelled), goToVec);
         }
         // wait at station
         else
@@ -100,9 +100,13 @@ public class Train : MonoBehaviour {
         return nextStation - currentStation;
     }
 
-    private void UpdateTrain(Vector4 position, Quaternion rotation)
+    private void UpdateTrain(Vector4 position, Vector4 lookAt)
     {
-        gameObject.transform.position = position;
+        Quaternion rotation = Quaternion.LookRotation(lookAt);
+        Vector3 upVec = new Vector3(0.0f, 0.0f, 1.0f);
+        Vector3 rightVec = Vector3.Cross(upVec, lookAt.normalized) *0.01f;
+        Vector4 offSet = new Vector4(rightVec.x, rightVec.y, rightVec.z, 0.0f);
+        gameObject.transform.position = position + offSet;
         gameObject.transform.rotation = rotation;
     }
 }

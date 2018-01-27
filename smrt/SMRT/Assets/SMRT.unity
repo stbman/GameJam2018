@@ -800,8 +800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Prefab: {fileID: 1851762294494182, guid: daefa40ec58cfd6488fe80cdf04e75c2, type: 2}
-  m_MinSpawnCooldown: 0.5
-  m_MaxSpawnCooldown: 1
+  m_MinSpawnCooldown: 1
+  m_MaxSpawnCooldown: 2
   m_RouteTag: RedLine
 --- !u!4 &1163882550
 Transform:

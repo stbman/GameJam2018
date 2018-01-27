@@ -5,30 +5,77 @@ using UnityEngine;
 public class Train : MonoBehaviour {
 
     public string m_RouteTag;
+    public float m_TrainSpeed = 5.0f;
+    public float m_TimeToWaitInStation = 0.0f;
     public int m_CurrentStationIndex = 1;
-    public int m_NextStationIndex = 2;
+    public bool m_IncreaseToNextStation = true;
 
     private GameObject m_RouteMaster;
     private RouteScript m_RouteComp;
-    private Rigidbody m_RigidBody;
-    private float m_TimeElasped;
+
+    private float m_DistanceTravelled;
+    private float m_TimeInStation;
     // Use this for initialization
     void Start () {
-        m_RigidBody = gameObject.GetComponent<Rigidbody>();
         m_RouteMaster = GameObject.FindGameObjectWithTag(m_RouteTag);
         m_RouteComp = m_RouteMaster.GetComponent<RouteScript>();
 
-        m_TimeElasped = 0.0f;
+        m_DistanceTravelled = 0.0f;
+        m_TimeInStation = 0.0f;
     }
     
     // Update is called once per frame
     void Update () {
+        int nextStationIndex   = m_IncreaseToNextStation ? m_CurrentStationIndex + 1 : m_CurrentStationIndex - 1;
         Vector4 currentStation = m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
-        Vector4 nextStation = m_RouteComp.m_WayPoint[m_NextStationIndex].transform.position;
-        m_TimeElasped += Time.deltaTime;
+        Vector4 nextStation    = m_RouteComp.m_WayPoint[nextStationIndex].transform.position;
+        Vector4 goToVec        = nextStation - currentStation;
 
-        Vector4 newPosition = currentStation + ((nextStation - currentStation) * m_TimeElasped);
+        float totalDistance = goToVec.magnitude;
+        // go to next station
+        if (m_DistanceTravelled < totalDistance)
+        {
+            // TODO: stop if a train is still at next station
+            
+            m_DistanceTravelled += Time.deltaTime * m_TrainSpeed;
+            if (m_DistanceTravelled >= totalDistance)
+            {
+                m_DistanceTravelled = totalDistance;
+            }
 
-        gameObject.transform.position = newPosition;
+            gameObject.transform.position = currentStation + (goToVec.normalized * m_DistanceTravelled);
+        }
+        // wait at station
+        else
+        {
+            m_TimeInStation += Time.deltaTime;
+            if (m_TimeInStation >= m_TimeToWaitInStation)
+            {
+                m_DistanceTravelled = 0.0f;
+                if (m_IncreaseToNextStation)
+                {
+                    if (m_CurrentStationIndex + 1 >= m_RouteComp.m_WayPoint.Length)
+                    {
+                        m_IncreaseToNextStation = false;
+                    }
+                    else
+                    {
+                        ++m_CurrentStationIndex;
+                    }
+                }
+                else
+                {
+                    if (m_CurrentStationIndex <= 0)
+                    {
+                        m_IncreaseToNextStation = true;
+                    }
+                    else
+                    {
+                        --m_CurrentStationIndex;
+                    }
+                }
+                // move to next station
+            }
+        }
     }
 }

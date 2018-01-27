@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CameraRig
   - RedLine
+  - GreenLine
+  - GreenLineChangi
+  - CircleLine
+  - CircleLineDhoby
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,5 @@
+var areaElements;
+
 $(document).ready(function () {
 
     appendTrainMap();
@@ -5,8 +7,18 @@ $(document).ready(function () {
     var listOfRandomTrains = createRandomTrains(10);
     createTrainTable(listOfRandomTrains);
 	
-	$("#map-container").click(function (event) {
+    $("#map-container").click(function (event) {
+        
 	    console.log(event.clientX + " " + event.clientY);
+
+	    var xCoord = Math.floor(event.clientX / 1.1);
+	    var yCoord = Math.floor(event.clientY / 1.1);
+
+	    var nearestElem = findClosestElement(xCoord, yCoord);
+	    mrt_id = nearestElem["id"];
+	    mrt_name = nearestElem["alt"];
+
+	    alert(mrt_id + " " + mrt_name);
 	});
 
 	$("area.mrt-map-area").mouseover(function (event) {
@@ -31,6 +43,8 @@ function appendTrainMap() {
         var trainElem = "<area class=\"mrt-map-area\" id=\"" + train["id"] + "\" shape=\"circle\" coords=\"" + train["coords"] + "\"" + " href=\"#\"  alt=\"" + train["alt"] + "\">";
         $("#mrtmap").append(trainElem);
     }
+
+    areaElements = document.getElementsByTagName("area");
 }
 
 function createTrainTable(listOfRandomTrains) {
@@ -49,8 +63,26 @@ function createTrainTable(listOfRandomTrains) {
             "<div class=\"col-sm\">" + "A TRAIN HERE" +
             "</div>" +
             "</div>";
+
         trainHTML += trainObject;
     }
 
-    $(trainBarId).html(trainHTML);
+   $(trainBarId).html(trainHTML);
+}
+
+function findClosestElement(xCoord, yCoord) {
+    var distances = [];
+
+    for (var i=0; i<areaElements.length; i++) {
+        var coordinates = areaElements[i]["coords"].split(",");
+        var areaXCoord = parseInt(coordinates[0]);
+        var areaYCoord = parseInt(coordinates[1]);
+
+        var distToClick = Math.hypot(areaXCoord-xCoord, areaYCoord-yCoord);
+        distances.push(distToClick);
+    }
+    
+    var closestAreaIndex = distances.indexOf(Math.min.apply(null, distances));
+
+    return areaElements[closestAreaIndex];
 }

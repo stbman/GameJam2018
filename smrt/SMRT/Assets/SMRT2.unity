@@ -220,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 45888522}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.03, y: 0.16, z: -0.41}
-  m_LocalScale: {x: 2, y: 2, z: 0.01}
+  m_LocalScale: {x: 10, y: 10, z: 0.01}
   m_Children:
   - {fileID: 1010902070}
   m_Father: {fileID: 0}
@@ -534,7 +534,7 @@ Transform:
   m_GameObject: {fileID: 356899519}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 2.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -949,6 +949,8 @@ MonoBehaviour:
   m_MinSpawnCooldown: 0.5
   m_MaxSpawnCooldown: 1
   m_RouteTag: RedLine
+  m_MaxTrain: 20
+  m_TrainSpeedd: 0.1
 --- !u!4 &1163882550
 Transform:
   m_ObjectHideFlags: 0
@@ -1211,12 +1213,10 @@ MonoBehaviour:
   m_DampTime: 0.2
   m_UseZoom: 0
   m_Follow: 1
-  m_UseAveragePositionOfTargets: 0
-  m_UseMousePositionTracking: 1
   m_ScreenEdgeBuffer: 4
   m_MinSize: 6.5
   m_Targets: []
-  m_MoveToMouseSpeed: 5
+  m_MouseFollowSpeed: 0.1
 --- !u!4 &1993115672
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993115670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41161677, y: 0.13447055, z: -0.46060514}
+  m_LocalPosition: {x: -1, y: 0.13447055, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 391654701}

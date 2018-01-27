@@ -83,9 +83,9 @@ public class SMRTGameManager : MonoBehaviour {
 		m_HappinessIndex += happiness;
 	}
 
-	public void IncrementMoney(int money, Vector3 position)
+	public void IncrementMoney(int money)
 	{
-		DisplayMoneyFloatingText (money, position);
+		//DisplayMoneyFloatingText (money);
 		// if(m_SuccessfulSound)
 		// {
 		// 	m_SuccessfulSound.Play ();

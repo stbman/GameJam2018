@@ -17,10 +17,12 @@ public class Train : MonoBehaviour {
     private float m_TimeInStation;
     private bool m_Collidied;
     private Collider m_CollidiedWith;
+    private SMRTGameManager m_GameManager;
 
     // Use this for initialization
     void Start () {
         m_RouteMaster = GameObject.FindGameObjectWithTag(m_RouteTag);
+        m_GameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SMRTGameManager>();
         m_RouteComp = m_RouteMaster.GetComponent<RouteScript>();
         m_Renderer = gameObject.GetComponent<Renderer>();
 
@@ -61,6 +63,9 @@ public class Train : MonoBehaviour {
             {
                 m_DistanceTravelled = 0.0f;
                 m_TimeInStation = 0.0f;
+                // Reach station increase happiness
+                m_GameManager.IncrementHappiness(1);
+                m_GameManager.IncrementMoney(1);
 
                 if (m_IncreaseToNextStation)
                 {
@@ -109,10 +114,10 @@ public class Train : MonoBehaviour {
                 m_Renderer.material.color = new Color(1.0f, 0.0f, 0.0f);
                 m_Collidied = true;
                 m_CollidiedWith = other;
+                // Langa
+                m_GameManager.IncrementHappiness(-5);
             }
         }
-
-        // reduce happiness
     }
 
     void OnTriggerExit(Collider other)
@@ -129,6 +134,7 @@ public class Train : MonoBehaviour {
         GameObject.Destroy(gameObject);
 
         // if not break down,
+        m_GameManager.IncrementMoney(-10);
     }
 
     private int GetNextStationIndex()

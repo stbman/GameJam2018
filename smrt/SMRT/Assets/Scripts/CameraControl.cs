@@ -19,7 +19,6 @@ public class CameraControl : MonoBehaviour
 	private Vector3 m_MoveVelocity;                 // Reference velocity for the smooth damping of the position.
 	private Vector3 m_DesiredPosition;              // The position the camera is moving towards. It will be average of all m_Targets positions
 
-
 	private void Awake ()
 	{
 		m_Camera = GetComponentInChildren<Camera> ();

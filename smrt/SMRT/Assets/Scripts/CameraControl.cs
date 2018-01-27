@@ -30,14 +30,7 @@ public class CameraControl : MonoBehaviour
 
 	private void FixedUpdate ()
 	{
-        Vector2 mousePos = new Vector2();
-
-        // Get the mouse position from Event.
-        // Note that the y position from Event is inverted.
-        mousePos.x = Input.mousePosition.x;
-        mousePos.y = m_Camera.pixelHeight - Input.mousePosition.y;
-
-        Vector3 p = m_Camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
+        Vector3 p = m_Camera.ViewportToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
 
 		DebugDisplay.Log ("Screen mouse pos: " + Input.mousePosition.ToString());
 		DebugDisplay.Log ("World mouse pos: " + p.ToString());

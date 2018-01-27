@@ -17,6 +17,7 @@ public class SMRTGameManager : MonoBehaviour
     public Text m_HappinessIndexText;
     public Text m_MoneyText;
     public Text m_GameOverText;
+	public GameObject m_GameOverPanel;
     public Text m_DaysText;
     private float m_HappinessIndex;
     private float m_Money;
@@ -32,6 +33,7 @@ public class SMRTGameManager : MonoBehaviour
     public Text m_DaysTimerText;
     public float m_StartingTimeDuration = 3.0f;
     public Timer m_StartingTimer; // Count down timer to the start of game
+	public GameObject m_StartingTimerPanel;
     public Timer m_DaysTimer; // Count down timer to end of day
     // Sound
     [Header("Sound")]
@@ -60,12 +62,14 @@ public class SMRTGameManager : MonoBehaviour
         m_Money = 0.0f;
         m_Days = 0;
         m_StartingTimer.StartTimer(m_StartingTimeDuration);
+		m_StartingTimerPanel.active = true;
     }
 
     void RestartLevel()
     {
         m_IsRestarting = true;
         m_LevelStarted = false;
+		m_GameOverPanel.active = false;
         SetUITextSafely(m_GameOverText, "");
         Init();
     }
@@ -78,12 +82,15 @@ public class SMRTGameManager : MonoBehaviour
         SetUITextSafely(m_StartingTimerText, "");
         SetUITextSafely(m_GameOverText, "");
         m_DaysTimer.StartTimer(m_DaysDuration);
+		m_StartingTimerPanel.active = false;
+		m_GameOverPanel.active = false;
     }
 
     void GameOver()
     {
         m_IsGameOver = true;
         SetUITextSafely(m_GameOverText, "Game Over! Tap to Restart!");
+		m_GameOverPanel.active = true;
     }
 
     public void IncrementHappiness(float happiness)

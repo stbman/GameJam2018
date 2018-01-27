@@ -73,11 +73,15 @@ MonoBehaviour:
   m_MoneyText: {fileID: 0}
   m_GameOverText: {fileID: 0}
   m_DaysText: {fileID: 0}
-  m_StartingTimerTextPanel: {fileID: 0}
+  m_HappinessForCompletingAStation: 0.1
+  m_HappinessForTrainSlowdown: -20
+  m_MoneyGainWhenReachStation: 1
+  m_MoneyLostForPullingATrainOutOfService: -100
   m_StartingTimerText: {fileID: 0}
   m_DaysTimerText: {fileID: 0}
   m_StartingTimeDuration: 3
   m_StartingTimer: {fileID: 114584080125315218}
+  m_StartingTimerPanel: {fileID: 0}
   m_DaysTimer: {fileID: 114116585247364074}
   m_InGameBackgroundMusic: {fileID: 0}
   m_SuccessfulSound: {fileID: 0}

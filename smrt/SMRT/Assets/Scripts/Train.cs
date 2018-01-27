@@ -97,7 +97,9 @@ public class Train : MonoBehaviour {
         //render.material.color
 
         Train otherTrain = other.GetComponent<Train>();
-        if (otherTrain)
+        
+        if (   otherTrain
+            && otherTrain.tag == m_RouteTag)
         {
             //int nextStationIndex = GetNextStationIndex();
             if (otherTrain.m_CurrentStationIndex == m_CurrentStationIndex

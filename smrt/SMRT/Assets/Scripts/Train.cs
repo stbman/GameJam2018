@@ -15,7 +15,7 @@ public class Train : MonoBehaviour {
     private Renderer    m_Renderer;
     private float m_DistanceTravelled;
     private float m_TimeInStation;
-    public bool m_Collidied;
+    private bool m_Collidied;
     private Collider m_CollidiedWith;
 
     // Use this for initialization
@@ -99,7 +99,7 @@ public class Train : MonoBehaviour {
         Train otherTrain = other.GetComponent<Train>();
         
         if (   otherTrain
-            && otherTrain.tag == m_RouteTag)
+            && otherTrain.m_RouteTag == m_RouteTag)
         {
             //int nextStationIndex = GetNextStationIndex();
             if (otherTrain.m_CurrentStationIndex == m_CurrentStationIndex

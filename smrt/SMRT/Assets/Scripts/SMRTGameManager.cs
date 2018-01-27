@@ -6,16 +6,24 @@ using UnityEngine.UI;
 public class SMRTGameManager : MonoBehaviour {
 	[Header("Gameplay")]
 	public string m_MainMenuLevel;
-	private CameraControl m_CameraController;
 	public float m_ScorePerSuccess = 1.0f;
+	private CameraControl m_CameraController;
+	private int m_Days = 0;
+	private int m_HighScoreDays = 0;
 
 	// UI stuff
 	[Header("UI")]
 	public Text m_HappinessIndexText;
 	public Text m_MoneyText;
-
+	public Text m_GameOverText;
 	private float m_HappinessIndex;
-	private float m_Score;
+	private float m_Money;
+
+	// GameMode
+	[Header("Starting Timer")]
+	public Text m_StartingTimerText;
+	public float m_StartingTimeDuration = 3.0f;
+	public Timer m_StartingTimer; // Count down timer to the start of game
 
 	// Sound
 	[Header("Sound")]
@@ -31,33 +39,119 @@ public class SMRTGameManager : MonoBehaviour {
 	public bool m_IsRestarting = false;
 	// Gameflow 
 	private bool m_LevelStarted = false;
-	//--- End of Timer based Game Mode Stuff ---
 	// Use this for initialization
 	void Start () {
 		GameObject cameraRig = GameObject.FindGameObjectWithTag ("CameraRig");
 		m_CameraController = cameraRig.GetComponent<CameraControl> ();
-	}
-	
-	public void IncrementScore(int score, Vector3 position)
-	{
-		DisplayScoreFloatingText (score, position);
-		if(m_SuccessfulSound)
-		{
-			m_SuccessfulSound.Play ();
-		}
-		m_Score += score;
+
+		Init();
 	}
 
-	public void DisplayScoreFloatingText(float score, Vector3 position)
+	void Init()
+	{
+		m_HappinessIndex = 0.0f;
+		m_Money = 0.0f;
+		m_Days = 0;
+		m_StartingTimer.StartTimer(m_StartingTimeDuration);
+	}
+
+	void RestartLevel()
+	{
+		m_IsRestarting = true;
+		m_LevelStarted = false;
+		Init();
+	}
+
+	void StartGame()
+	{
+		m_LevelStarted = true;
+		m_IsRestarting = false;
+		m_IsGameOver = false;
+		SetUITextSafely(m_StartingTimerText, "");
+		SetUITextSafely(m_GameOverText, "");
+	}
+
+	void GameOver()
+	{
+		m_IsGameOver = true;
+		SetUITextSafely(m_GameOverText, "Game Over! Tap to Restart!");
+	}
+	
+	public void IncrementHappiness(float happiness)
+	{
+		m_HappinessIndex += happiness;
+	}
+
+	public void IncrementMoney(int money, Vector3 position)
+	{
+		DisplayMoneyFloatingText (money, position);
+		// if(m_SuccessfulSound)
+		// {
+		// 	m_SuccessfulSound.Play ();
+		// }
+		m_Money += money;
+	}
+
+	public void DisplayMoneyFloatingText(float money, Vector3 position)
 	{
 		//Transform tr
-		string timeExtensionMessage = "+" + score.ToString() + " secs";
-		FloatingTextManager.CreateFloatingText(timeExtensionMessage, position);
+		string moneyMessage = "+" + money.ToString() + " $";
+		FloatingTextManager.CreateFloatingText(moneyMessage, position);
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		
+		GameFlowUpdate();
+	}
+
+	void GameFlowUpdate()
+	{
+		if (!m_LevelStarted && m_StartingTimer.IsStarted ()) {
+			// Restrict input, no use case for now
+		}
+
+		if(!m_LevelStarted && m_StartingTimer.IsElapsed())
+		{
+			StartGame();
+		}
+
+		if(m_HappinessIndex < 0.0f)
+		{
+			GameOver();
+		}
+
+		if(m_IsGameOver)
+		{
+			if(!m_IsRestarting && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+			{
+				RestartLevel();
+			}
+		}
+
+		UpdateUI();
+		UpdateTimers();
+	}
+
+	private void SetUITextSafely(Text textObject, string uiText)
+	{
+		if(textObject)
+		{
+			textObject.text = uiText;
+		}
+	}
+
+	void UpdateTimers()
+	{
+		if(!m_StartingTimer.IsElapsed())
+		{
+			SetUITextSafely(m_StartingTimerText, Mathf.Round(m_StartingTimer.GetTimeLeft()).ToString());
+		}
+	}
+
+	void UpdateUI()
+	{
+		SetUITextSafely(m_HappinessIndexText, m_HappinessIndex.ToString());
+		SetUITextSafely(m_MoneyText, m_Money.ToString());
 	}
 }

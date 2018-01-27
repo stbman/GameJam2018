@@ -9,6 +9,7 @@ TagManager:
   - GreenLine
   - GreenLineChangi
   - CircleLine
+  - CircleLineDhoby
   layers:
   - Default
   - TransparentFX

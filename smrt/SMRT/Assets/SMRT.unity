@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 14682795}
   m_Layer: 0
   m_Name: TiongBahru
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 53246169}
   m_Layer: 0
   m_Name: Bartley
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 62078914}
   m_Layer: 0
   m_Name: Aljunied
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 69610096}
   m_Layer: 0
   m_Name: AngMoKio
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 91463900}
   m_Layer: 0
   m_Name: Dover
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 91752971}
   m_Layer: 0
   m_Name: Clementi
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 193868185}
   m_Layer: 0
   m_Name: TuasWestRoad
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 203729181}
   m_Layer: 0
   m_Name: ChangiAirport
-  m_TagString: GreenLineChangi
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 224435774}
   m_Layer: 0
   m_Name: Admiralty
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 267676515}
   m_Layer: 0
   m_Name: TaiSeng
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 279136339}
   m_Layer: 0
   m_Name: BoonLay
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 281437850}
   m_Layer: 0
   m_Name: KentRidge
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 314747751}
   m_Layer: 0
   m_Name: RafflesPlace
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 323760744}
   m_Layer: 0
   m_Name: DhobyGhaut
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1456,7 +1456,7 @@ GameObject:
   - component: {fileID: 351402219}
   m_Layer: 0
   m_Name: Newton
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1707,7 +1707,7 @@ GameObject:
   - component: {fileID: 475350236}
   m_Layer: 0
   m_Name: Tampines
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 499274281}
   m_Layer: 0
   m_Name: PasirRis
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1922,7 +1922,7 @@ GameObject:
   - component: {fileID: 540061967}
   m_Layer: 0
   m_Name: JurongEast
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2006,7 +2006,7 @@ GameObject:
   - component: {fileID: 565151678}
   m_Layer: 0
   m_Name: PayaLebar
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2174,7 +2174,7 @@ GameObject:
   - component: {fileID: 591756916}
   m_Layer: 0
   m_Name: TelokBlangah
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2405,7 +2405,7 @@ GameObject:
   - component: {fileID: 653331091}
   m_Layer: 0
   m_Name: LabadorPark
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 718176989}
   m_Layer: 0
   m_Name: BotanicGardens
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2573,7 +2573,7 @@ GameObject:
   - component: {fileID: 733334635}
   m_Layer: 0
   m_Name: Mountbatten
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2657,7 +2657,7 @@ GameObject:
   - component: {fileID: 741116852}
   m_Layer: 0
   m_Name: Dakota
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2741,7 +2741,7 @@ GameObject:
   - component: {fileID: 750119682}
   m_Layer: 0
   m_Name: TanahMerah
-  m_TagString: GreenLineChangi
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2825,7 +2825,7 @@ GameObject:
   - component: {fileID: 803518285}
   m_Layer: 0
   m_Name: Commonwealth
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2909,7 +2909,7 @@ GameObject:
   - component: {fileID: 811969759}
   m_Layer: 0
   m_Name: Serangoon
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2993,7 +2993,7 @@ GameObject:
   - component: {fileID: 829089898}
   m_Layer: 0
   m_Name: LorongChuan
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3077,7 +3077,7 @@ GameObject:
   - component: {fileID: 846345331}
   m_Layer: 0
   m_Name: Khatib
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3161,7 +3161,7 @@ GameObject:
   - component: {fileID: 852587943}
   m_Layer: 0
   m_Name: Bugis
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3245,7 +3245,7 @@ GameObject:
   - component: {fileID: 893266835}
   m_Layer: 0
   m_Name: Tampines
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3329,7 +3329,7 @@ GameObject:
   - component: {fileID: 898719269}
   m_Layer: 0
   m_Name: Expo
-  m_TagString: GreenLineChangi
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3413,7 +3413,7 @@ GameObject:
   - component: {fileID: 900695989}
   m_Layer: 0
   m_Name: ChoaChuKang
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3497,7 +3497,7 @@ GameObject:
   - component: {fileID: 917427456}
   m_Layer: 0
   m_Name: Kembangan
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3581,7 +3581,7 @@ GameObject:
   - component: {fileID: 932254284}
   m_Layer: 0
   m_Name: RafflesPlace
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3665,7 +3665,7 @@ GameObject:
   - component: {fileID: 963908361}
   m_Layer: 0
   m_Name: Bayfront
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3842,7 +3842,7 @@ GameObject:
   - component: {fileID: 1026101183}
   m_Layer: 0
   m_Name: Promenade
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3926,7 +3926,7 @@ GameObject:
   - component: {fileID: 1028194116}
   m_Layer: 0
   m_Name: PasirPanjang
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4010,7 +4010,7 @@ GameObject:
   - component: {fileID: 1045255061}
   m_Layer: 0
   m_Name: onenorth
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4094,7 +4094,7 @@ GameObject:
   - component: {fileID: 1054991133}
   m_Layer: 0
   m_Name: MarinaSouthPier
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4178,7 +4178,7 @@ GameObject:
   - component: {fileID: 1071406015}
   m_Layer: 0
   m_Name: Redhill
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4357,7 +4357,7 @@ GameObject:
   - component: {fileID: 1096006479}
   m_Layer: 0
   m_Name: Simei
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4441,7 +4441,7 @@ GameObject:
   - component: {fileID: 1132073582}
   m_Layer: 0
   m_Name: Kallang
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4525,7 +4525,7 @@ GameObject:
   - component: {fileID: 1135910008}
   m_Layer: 0
   m_Name: Orchard
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4609,7 +4609,7 @@ GameObject:
   - component: {fileID: 1141185017}
   m_Layer: 0
   m_Name: BounaVista
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4750,7 +4750,7 @@ GameObject:
   - component: {fileID: 1164839486}
   m_Layer: 0
   m_Name: Stadium
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4834,7 +4834,7 @@ GameObject:
   - component: {fileID: 1170460779}
   m_Layer: 0
   m_Name: GulCircle
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4918,7 +4918,7 @@ GameObject:
   - component: {fileID: 1173418093}
   m_Layer: 0
   m_Name: JurongEast
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5002,7 +5002,7 @@ GameObject:
   - component: {fileID: 1181281494}
   m_Layer: 0
   m_Name: Caldecott
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5086,7 +5086,7 @@ GameObject:
   - component: {fileID: 1220851531}
   m_Layer: 0
   m_Name: BounaVista
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5170,7 +5170,7 @@ GameObject:
   - component: {fileID: 1238319958}
   m_Layer: 0
   m_Name: BukitGombak
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5254,7 +5254,7 @@ GameObject:
   - component: {fileID: 1247311093}
   m_Layer: 0
   m_Name: Sembawang
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5338,7 +5338,7 @@ GameObject:
   - component: {fileID: 1294148799}
   m_Layer: 0
   m_Name: ChineseGarden
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5422,7 +5422,7 @@ GameObject:
   - component: {fileID: 1304418480}
   m_Layer: 0
   m_Name: Marymount
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5506,7 +5506,7 @@ GameObject:
   - component: {fileID: 1328085314}
   m_Layer: 0
   m_Name: TuasCrescent
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5590,7 +5590,7 @@ GameObject:
   - component: {fileID: 1339692556}
   m_Layer: 0
   m_Name: Kranji
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5674,7 +5674,7 @@ GameObject:
   - component: {fileID: 1345481603}
   m_Layer: 0
   m_Name: Bishan
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5758,7 +5758,7 @@ GameObject:
   - component: {fileID: 1345927153}
   m_Layer: 0
   m_Name: HarParVilla
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5842,7 +5842,7 @@ GameObject:
   - component: {fileID: 1350801717}
   m_Layer: 0
   m_Name: YioChuKang
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5926,7 +5926,7 @@ GameObject:
   - component: {fileID: 1353197512}
   m_Layer: 0
   m_Name: ToaPayoh
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6010,7 +6010,7 @@ GameObject:
   - component: {fileID: 1372593889}
   m_Layer: 0
   m_Name: TuasLink
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6094,7 +6094,7 @@ GameObject:
   - component: {fileID: 1395553704}
   m_Layer: 0
   m_Name: BrasBasah
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6178,7 +6178,7 @@ GameObject:
   - component: {fileID: 1424750996}
   m_Layer: 0
   m_Name: Somerset
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6262,7 +6262,7 @@ GameObject:
   - component: {fileID: 1431189685}
   m_Layer: 0
   m_Name: Lakeside
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6346,7 +6346,7 @@ GameObject:
   - component: {fileID: 1492775555}
   m_Layer: 0
   m_Name: DhobyGhaut
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6430,7 +6430,7 @@ GameObject:
   - component: {fileID: 1502625023}
   m_Layer: 0
   m_Name: Woodlands
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6514,7 +6514,7 @@ GameObject:
   - component: {fileID: 1534126069}
   m_Layer: 0
   m_Name: OutramPark
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6598,7 +6598,7 @@ GameObject:
   - component: {fileID: 1570429145}
   m_Layer: 0
   m_Name: HollandVillage
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6682,7 +6682,7 @@ GameObject:
   - component: {fileID: 1572044731}
   m_Layer: 0
   m_Name: MarinaBay
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6766,7 +6766,7 @@ GameObject:
   - component: {fileID: 1617388955}
   m_Layer: 0
   m_Name: CityHall
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6897,7 +6897,7 @@ GameObject:
   - component: {fileID: 1633741260}
   m_Layer: 0
   m_Name: CityHall
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6981,7 +6981,7 @@ GameObject:
   - component: {fileID: 1642915657}
   m_Layer: 0
   m_Name: JooKoon
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7107,7 +7107,7 @@ GameObject:
   - component: {fileID: 1647692367}
   m_Layer: 0
   m_Name: TanjongPagar
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7191,7 +7191,7 @@ GameObject:
   - component: {fileID: 1692981965}
   m_Layer: 0
   m_Name: Bedok
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7275,7 +7275,7 @@ GameObject:
   - component: {fileID: 1698022749}
   m_Layer: 0
   m_Name: TanahMerah
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7359,7 +7359,7 @@ GameObject:
   - component: {fileID: 1773923169}
   m_Layer: 0
   m_Name: MacPherson
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7443,7 +7443,7 @@ GameObject:
   - component: {fileID: 1786484919}
   m_Layer: 0
   m_Name: Eunos
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7527,7 +7527,7 @@ GameObject:
   - component: {fileID: 1877763862}
   m_Layer: 0
   m_Name: Bishan
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7611,7 +7611,7 @@ GameObject:
   - component: {fileID: 1900433481}
   m_Layer: 0
   m_Name: Harbourfront
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7695,7 +7695,7 @@ GameObject:
   - component: {fileID: 1903109846}
   m_Layer: 0
   m_Name: MarinaBay
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7779,7 +7779,7 @@ GameObject:
   - component: {fileID: 1920659868}
   m_Layer: 0
   m_Name: Yishun
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7863,7 +7863,7 @@ GameObject:
   - component: {fileID: 1933581388}
   m_Layer: 0
   m_Name: Braddell
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7947,7 +7947,7 @@ GameObject:
   - component: {fileID: 1937213867}
   m_Layer: 0
   m_Name: Queenstown
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8031,7 +8031,7 @@ GameObject:
   - component: {fileID: 1957011955}
   m_Layer: 0
   m_Name: PayaLebar
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8115,7 +8115,7 @@ GameObject:
   - component: {fileID: 1978827912}
   m_Layer: 0
   m_Name: Lavender
-  m_TagString: GreenLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8246,7 +8246,7 @@ GameObject:
   - component: {fileID: 1998473927}
   m_Layer: 0
   m_Name: YewTee
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8330,7 +8330,7 @@ GameObject:
   - component: {fileID: 2006790335}
   m_Layer: 0
   m_Name: NicollHighway
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8414,7 +8414,7 @@ GameObject:
   - component: {fileID: 2068574854}
   m_Layer: 0
   m_Name: Esplanade
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8498,7 +8498,7 @@ GameObject:
   - component: {fileID: 2084317512}
   m_Layer: 0
   m_Name: Marsling
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8582,7 +8582,7 @@ GameObject:
   - component: {fileID: 2097725060}
   m_Layer: 0
   m_Name: BukitBatok
-  m_TagString: RedLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8666,7 +8666,7 @@ GameObject:
   - component: {fileID: 2127267676}
   m_Layer: 0
   m_Name: FarrerRoad
-  m_TagString: CircleLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,7 +18,7 @@ public class Train : MonoBehaviour {
     private bool m_Collidied;
     private Collider m_CollidiedWith;
     private SMRTGameManager m_GameManager;
-
+    private Vector4 m_LookAtCache;
     // Use this for initialization
     void Start () {
         m_RouteMaster = GameObject.FindGameObjectWithTag(m_RouteTag);
@@ -31,7 +31,7 @@ public class Train : MonoBehaviour {
         m_CurrentStationIndex = 0;
         m_IncreaseToNextStation = true;
         m_Collidied = false;
-
+        m_LookAtCache = GetGoToVector().normalized;
         UpdateTrain(GetCurrentStation(), GetGoToVector());
     }
     
@@ -181,11 +181,11 @@ public class Train : MonoBehaviour {
 
     private void UpdateTrain(Vector4 position, Vector4 lookAt)
     {
-        Quaternion rotation = Quaternion.LookRotation(lookAt);
+        m_LookAtCache = (m_LookAtCache * 0.9f) + (lookAt.normalized * 0.1f);
         Vector3 upVec = new Vector3(0.0f, 0.0f, 1.0f);
         Vector3 rightVec = Vector3.Cross(upVec, lookAt.normalized) *0.02f;
         Vector3 v3Position = position;
         gameObject.transform.position = (gameObject.transform.position * 0.9f) + ((v3Position + rightVec) * 0.1f);
-        gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rotation, 0.1f);
+        gameObject.transform.rotation = Quaternion.LookRotation(m_LookAtCache); ;
     }
 }

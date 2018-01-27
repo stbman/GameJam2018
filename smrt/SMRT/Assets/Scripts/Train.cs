@@ -5,12 +5,12 @@ using UnityEngine;
 public class Train : MonoBehaviour {
 
     public string m_RouteTag;
-    public float m_TrainSpeed = 5.0f;
-    public float m_TimeToWaitInStation = 0.0f;
-    public int m_CurrentStationIndex = 1;
-    public bool m_IncreaseToNextStation = true;
+    public float  m_TrainSpeed            = 0.1f;
+    public float  m_TimeToWaitInStation   = 1.0f;
+    public int    m_CurrentStationIndex   = 0;
+    public bool   m_IncreaseToNextStation = true;
 
-    private GameObject m_RouteMaster;
+    private GameObject  m_RouteMaster;
     private RouteScript m_RouteComp;
 
     private float m_DistanceTravelled;
@@ -45,6 +45,7 @@ public class Train : MonoBehaviour {
 
             gameObject.transform.position = currentStation + (goToVec.normalized * m_DistanceTravelled);
         }
+        //gameObject.transform.position = currentStation;
         // wait at station
         else
         {
@@ -52,6 +53,7 @@ public class Train : MonoBehaviour {
             if (m_TimeInStation >= m_TimeToWaitInStation)
             {
                 m_DistanceTravelled = 0.0f;
+                m_TimeInStation = 0.0f;
                 if (m_IncreaseToNextStation)
                 {
                     if (m_CurrentStationIndex + 1 >= m_RouteComp.m_WayPoint.Length)

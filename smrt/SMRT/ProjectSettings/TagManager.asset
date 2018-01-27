@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CameraRig
   - RedLine
+  - GreenLine
   layers:
   - Default
   - TransparentFX

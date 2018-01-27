@@ -5,8 +5,8 @@ var trainsDeployed = [];
 // Dummy object 
 var trainInMotion = {
     "id": 0,
-    "stationNow": "NS4/BP1",
-    "stationNext": "NS17/CC15",
+    "stationNow": [],
+    "stationNext": [],
     "travelDelta": 0.5,
     "breakdown": false
 }
@@ -24,7 +24,10 @@ function createRandomTrains() {
         randomTrain["travelDelta"] = 0;
 
         randomLine = generateRandomLine();
-        randomStationIdx = generateRandomNumber(0, stationList.length);
+        randomStationIdx = generateRandomNumber(0, randomLine.length);
+
+        randomTrain["stationNow"] = randomLine[randomStationIdx];
+        randomTrain["stationNext"] = randomLine[randomStationIdx + 1];
 
         trainsDeployed.push(randomTrain);
        

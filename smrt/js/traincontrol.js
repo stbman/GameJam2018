@@ -30,8 +30,6 @@ function createTrain(idx) {
     randomLine = generateRandomLine();
     randomStationIdx = generateRandomNumber(0, randomLine.length);
 
-    console.log(randomLine);
-
     randomTrain["stationNow"] = randomLine[randomStationIdx];
     randomTrain["stationNext"] = randomLine[randomStationIdx + 1];
 

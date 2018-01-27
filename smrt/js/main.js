@@ -34,7 +34,6 @@ function appendTrainMap() {
 }
 
 function createTrainTable(listOfRandomTrains) {
-    console.log(listOfRandomTrains)
     var trainBarId = "#train-list";
     $(trainBarId).html("");
 
@@ -47,14 +46,11 @@ function createTrainTable(listOfRandomTrains) {
             "</div>" +
             "<div class=\"col-sm\">" + listOfRandomTrains[i]["stationNow"]["id"] + 
             "</div>" +
-            "<div class=\"col-sm\">" + "A TRAIN HERE"
+            "<div class=\"col-sm\">" + "A TRAIN HERE" +
             "</div>" +
             "</div>";
-
         trainHTML += trainObject;
     }
-
-    console.log(trainHTML);
 
     $(trainBarId).html(trainHTML);
 }

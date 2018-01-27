@@ -35,3 +35,5 @@ var ewline = [
     {"id":"EW1"          , "coords":"798,215,6" , "alt":"Pasir Ris"}
 
 ]
+
+allTrainLists.push(ewline);

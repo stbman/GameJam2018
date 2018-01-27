@@ -1,44 +1,26 @@
-var stationList = [
+var circleline = [
 
-    {"id":"NS4/BP1"      , "coords":"165,147,6" , "alt":"Choa Chu Kang"},
-    {"id":"NS4/BP1"      , "coords":"165,147,6" , "alt":"Choa Chu Kang"},
-    {"id":"NS17/CC15"    , "coords":"495,226,9" , "alt":"Bishan"},
     {"id":"NS24/NE6/CC1" , "coords":"448,378,11", "alt":"Dhoby Ghaut"},
-    {"id":"NS27/CE2"     , "coords":"457,567,9" , "alt":"Marina Bay"},
-    {"id":"NE1/CC29"     , "coords":"262,567,6" , "alt":"HarbourFront"},
-    {"id":"NE4/DT19"     , "coords":"386,445,9" , "alt":"Chinatown"},
-    {"id":"NE12/CC13"    , "coords":"563,222,9" , "alt":"Serangoon"},
-    {"id":"NE16/STC"     , "coords":"622,139,6" , "alt":"Sengkang"},
-    {"id":"NE17/PTC"     , "coords":"676,88,6"  , "alt":"Punggol"},
-    {"id":"EW8/CC9"      , "coords":"648,335,9" , "alt":"Paya Lebar"},
-    {"id":"EW12/DT14"    , "coords":"547,406,9" , "alt":"Bugis"},
-    {"id":"EW13/NS25"    , "coords":"485,470,6" , "alt":"City Hall"},
-    {"id":"EW14/NS26"    , "coords":"472,483,6" , "alt":"Raffles Place"},
-    {"id":"EW16/NE3"     , "coords":"360,465,9" , "alt":"Outram Park"},
-    {"id":"EW24/NS1"     , "coords":"170,315,6" , "alt":"Jurong East"},
-    {"id":"CE1/DT16"     , "coords":"520,503,6" , "alt":"Bayfront"},
-    {"id":"CC4/DT15"     , "coords":"560,460,6" , "alt":"Promenade"},
-    {"id":"CC22/EW21"    , "coords":"259,366,9" , "alt":"Buona Vista"},
-    {"id":"DT1/BP6"      , "coords":"276,147,4" , "alt":"Bukit Panjang"},
-    {"id":"NE7/DT12"     , "coords":"482,340,9" , "alt":"Little India"},
-    {"id":"NS21/DT11"    , "coords":"440,307,8" , "alt":"Newton"},
-    {"id":"CC19/DT9"     , "coords":"357,272,6" , "alt":"Botanic Gardens"}, 
-    {"id":"CG1/DT35"     , "coords":"805,370,6" , "alt":"Expo"},
-    {"id":"CC10/DT26"    , "coords":"623,265,6" , "alt":"MacPherson"},
-
     {"id":"CC2"          , "coords":"497,419,6" , "alt":"Bras Basah"},
     {"id":"CC3"          , "coords":"520,446,6" , "alt":"Esplanade"},
+    {"id":"CC4/DT15"     , "coords":"560,460,6" , "alt":"Promenade"},
     {"id":"CC5"          , "coords":"594,428,6" , "alt":"Nicoll Highway"},
     {"id":"CC6"          , "coords":"616,407,6" , "alt":"Stadium"},
     {"id":"CC7"          , "coords":"636,384,6" , "alt":"Mountbatten"},
     {"id":"CC8"          , "coords":"651,357,6" , "alt":"Dakota"},
+    {"id":"EW8/CC9"      , "coords":"648,335,9" , "alt":"Paya Lebar"},
+    {"id":"CC10/DT26"    , "coords":"623,265,6" , "alt":"MacPherson"},
     {"id":"CC11"         , "coords":"607,250,6" , "alt":"Tai Seng"},
     {"id":"CC12"         , "coords":"593,235,6" , "alt":"Bartley"},
+    {"id":"NE12/CC13"    , "coords":"563,222,9" , "alt":"Serangoon"},
     {"id":"CC14"         , "coords":"529,224,6" , "alt":"Lorong Chuan"},
+    {"id":"NS17/CC15"    , "coords":"495,226,9" , "alt":"Bishan"},
     {"id":"CC16"         , "coords":"428,223,6" , "alt":"Marymount"},
     {"id":"CC17"         , "coords":"382,242,6" , "alt":"Caldecott"},
+    {"id":"CC19/DT9"     , "coords":"357,272,6" , "alt":"Botanic Gardens"},
     {"id":"CC20"         , "coords":"315,307,6" , "alt":"Farrer Road"},
     {"id":"CC21"         , "coords":"287,336,6" , "alt":"Holland Village"},
+    {"id":"CC22/EW21"    , "coords":"259,366,9" , "alt":"Buona Vista"},
     {"id":"CC23"         , "coords":"235,390,7" , "alt":"one-north"},
     {"id":"CC24"         , "coords":"215,413,6" , "alt":"Kent Ridge"},
     {"id":"CC25"         , "coords":"201,447,6" , "alt":"Haw Par Villa"},
@@ -48,3 +30,5 @@ var stationList = [
     {"id":"NE1/CC29"     , "coords":"262,567,6" , "alt":"HarbourFront"}
 
 ]
+
+allTrainLists.push(circleline);

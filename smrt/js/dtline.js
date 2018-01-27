@@ -1,0 +1,40 @@
+var dtline = [
+
+    {"id":"DT1/BP6"      , "coords":"276,147,4" , "alt":"Bukit Panjang"},
+    {"id":"DT2"          , "coords":"277,172,6" , "alt":"Cashew"},
+    {"id":"DT3"          , "coords":"277,192,6" , "alt":"Hill View"},
+    {"id":"DT5"          , "coords":"277,212,6" , "alt":"Beauty World"},
+    {"id":"DT6"          , "coords":"277,235,6" , "alt":"King Albert Park"},
+    {"id":"DT7"          , "coords":"286,262,6" , "alt":"Sixth Avenue"},
+    {"id":"DT8"          , "coords":"319,272,6" , "alt":"Tan Kah Kee"},
+    {"id":"CC19/DT9"     , "coords":"357,272,6" , "alt":"Botanic Gardens"},
+    {"id":"DT10"         , "coords":"399,272,6" , "alt":"Stevens"},
+    {"id":"NS21/DT11"    , "coords":"440,307,8" , "alt":"Newton"},
+    {"id":"NE7/DT12"     , "coords":"482,340,9" , "alt":"Little India"},
+    {"id":"DT13"         , "coords":"499,358,6" , "alt":"Rochor"},
+    {"id":"EW12/DT14"    , "coords":"547,406,9" , "alt":"Bugis"},
+    {"id":"CC4/DT15"     , "coords":"560,460,6" , "alt":"Promenade"},
+    {"id":"CE1/DT16"     , "coords":"520,503,6" , "alt":"Bayfront"},
+    {"id":"DT17"         , "coords":"466,522,6" , "alt":"Down Town"},
+    {"id":"DT18"         , "coords":"431,487,6" , "alt":"Telok Ayer"},
+    {"id":"NE4/DT19"     , "coords":"386,445,9" , "alt":"Chinatown"},
+    {"id":"DT20"         , "coords":"386,408,6" , "alt":"Fort Canning"},
+    {"id":"DT21"         , "coords":"502,388,6" , "alt":"Bencoolen"},
+    {"id":"DT22"         , "coords":"539,350,6" , "alt":"Jalan Besar"},
+    {"id":"DT23"         , "coords":"559,328,6" , "alt":"Bendemeer"},
+    {"id":"DT24"         , "coords":"579,307,6" , "alt":"Geylang Bahru"},
+    {"id":"DT25"         , "coords":"601,285,6" , "alt":"Mattar"},
+    {"id":"CC10/DT26"    , "coords":"623,265,6" , "alt":"MacPherson"},
+    {"id":"DT27"         , "coords":"657,247,6" , "alt":"Ubi"},
+    {"id":"DT28"         , "coords":"685,247,6" , "alt":"Kaki Bukit"},
+    {"id":"DT29"         , "coords":"712,247,6" , "alt":"Bedok North"},
+    {"id":"DT30"         , "coords":"738,247,6" , "alt":"Bedok Reservoir"},
+    {"id":"DT31"         , "coords":"765,247,6" , "alt":"Tampines West"},
+    {"id":"DT32"         , "coords":"813,274,6" , "alt":"Tampines"},
+    {"id":"DT33"         , "coords":"813,310,6" , "alt":"Tampines East"},
+    {"id":"DT34"         , "coords": "813,336,6", "alt":"Upper Changi" },
+    {"id":"CG1/DT35"     , "coords":"805,370,6" , "alt":"Expo"}
+    
+]
+
+allTrainLists.push(dtline);

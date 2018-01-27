@@ -5,3 +5,5 @@ var ewcline = [
     {"id":"CG2"          , "coords":"847,369,6" , "alt":"Changi Airport"}
 
 ]
+
+allTrainLists.push(ewcline);

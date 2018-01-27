@@ -160,12 +160,6 @@ public class Train : MonoBehaviour {
 
     private Vector4 GetCurrentStation()
     {
-        if (m_CurrentStationIndex < 0
-            || m_CurrentStationIndex > m_RouteComp.m_WayPoint.Length)
-        {
-            int i = 0;
-            int x = i + 10;
-        }
         return m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
     }
 

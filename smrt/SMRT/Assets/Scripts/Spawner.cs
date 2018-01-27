@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
     public float m_MaxSpawnCooldown;
     public string m_RouteTag;
     public int m_MaxTrain = 20;
+    public float m_TrainSpeedd = 0.1f;
 
     private Timer m_Timer;
     private bool m_Collided;
@@ -42,6 +43,7 @@ public class Spawner : MonoBehaviour {
             if (trainLogic)
             {
                 trainLogic.m_RouteTag = m_RouteTag;
+                trainLogic.m_TrainSpeed = m_TrainSpeedd;
                 ++m_SpawnedTrain;
             }
 

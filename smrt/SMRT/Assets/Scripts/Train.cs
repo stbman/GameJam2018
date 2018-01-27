@@ -22,14 +22,15 @@ public class Train : MonoBehaviour {
 
         m_DistanceTravelled = 0.0f;
         m_TimeInStation = 0.0f;
+        m_CurrentStationIndex = 2;
+        m_IncreaseToNextStation = false;
+
+        UpdateTrain(GetCurrentStation(), Quaternion.LookRotation(GetGoToVector()));
     }
     
     // Update is called once per frame
     void Update () {
-        int nextStationIndex   = m_IncreaseToNextStation ? m_CurrentStationIndex + 1 : m_CurrentStationIndex - 1;
-        Vector4 currentStation = m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
-        Vector4 nextStation    = m_RouteComp.m_WayPoint[nextStationIndex].transform.position;
-        Vector4 goToVec        = nextStation - currentStation;
+        Vector4 goToVec        = GetGoToVector();
 
         float totalDistance = goToVec.magnitude;
         // go to next station
@@ -43,7 +44,7 @@ public class Train : MonoBehaviour {
                 m_DistanceTravelled = totalDistance;
             }
 
-            gameObject.transform.position = currentStation + (goToVec.normalized * m_DistanceTravelled);
+            UpdateTrain(GetCurrentStation() + (goToVec.normalized * m_DistanceTravelled), Quaternion.LookRotation(goToVec));
         }
         // wait at station
         else
@@ -54,8 +55,9 @@ public class Train : MonoBehaviour {
                 m_DistanceTravelled = 0.0f;
                 if (m_IncreaseToNextStation)
                 {
-                    if (m_CurrentStationIndex + 1 >= m_RouteComp.m_WayPoint.Length)
+                    if (m_CurrentStationIndex + 2 >= m_RouteComp.m_WayPoint.Length)
                     {
+                        m_CurrentStationIndex = m_RouteComp.m_WayPoint.Length - 1;
                         m_IncreaseToNextStation = false;
                     }
                     else
@@ -65,8 +67,9 @@ public class Train : MonoBehaviour {
                 }
                 else
                 {
-                    if (m_CurrentStationIndex <= 0)
+                    if (m_CurrentStationIndex <= 1)
                     {
+                        m_CurrentStationIndex = 0;
                         m_IncreaseToNextStation = true;
                     }
                     else
@@ -77,5 +80,29 @@ public class Train : MonoBehaviour {
                 // move to next station
             }
         }
+    }
+
+    private Vector4 GetCurrentStation()
+    {
+        return m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
+    }
+
+    private Vector4 GetNextStation()
+    {
+        int nextStationIndex = m_IncreaseToNextStation ? m_CurrentStationIndex + 1 : m_CurrentStationIndex - 1;
+        return m_RouteComp.m_WayPoint[nextStationIndex].transform.position;
+    }
+    private Vector4 GetGoToVector()
+    {
+        
+        Vector4 currentStation = GetCurrentStation();
+        Vector4 nextStation    = GetNextStation();
+        return nextStation - currentStation;
+    }
+
+    private void UpdateTrain(Vector4 position, Quaternion rotation)
+    {
+        gameObject.transform.position = position;
+        gameObject.transform.rotation = rotation;
     }
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Train : MonoBehaviour {
+public class RouteScript : MonoBehaviour {
 
-    public string m_RouteTag;
-    public int m_CurrentStationIndex = 0;
+public GameObject[] m_WayPoint;
+
 	// Use this for initialization
 	void Start () {
 		

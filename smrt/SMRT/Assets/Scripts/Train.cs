@@ -50,9 +50,12 @@ public class Train : MonoBehaviour {
         else
         {
             m_TimeInStation += Time.deltaTime;
-            if (m_TimeInStation >= m_TimeToWaitInStation)
+            if (   m_TimeInStation >= m_TimeToWaitInStation
+                || NeedToWaitAtStation())
             {
                 m_DistanceTravelled = 0.0f;
+                m_TimeInStation = 0.0f;
+
                 if (m_IncreaseToNextStation)
                 {
                     if (m_CurrentStationIndex + 2 >= m_RouteComp.m_WayPoint.Length)
@@ -87,6 +90,11 @@ public class Train : MonoBehaviour {
         return m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
     }
 
+    private bool NeedToWaitAtStation()
+    {
+        int nextStationIndex = m_IncreaseToNextStation ? m_CurrentStationIndex + 1 : m_CurrentStationIndex - 1;
+        return m_RouteComp.m_WayPoint[nextStationIndex].tag == "NotAStation";
+    }
     private Vector4 GetNextStation()
     {
         int nextStationIndex = m_IncreaseToNextStation ? m_CurrentStationIndex + 1 : m_CurrentStationIndex - 1;

@@ -37,7 +37,8 @@ public class Train : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        if(m_GameManager && (!m_GameManager.m_LevelStarted || m_GameManager.m_IsGameOver))
+        if(     m_GameManager
+            && !m_GameManager.m_LevelStarted)
         {
             return;
         }
@@ -69,8 +70,8 @@ public class Train : MonoBehaviour {
                 m_DistanceTravelled = 0.0f;
                 m_TimeInStation = 0.0f;
                 // Reach station increase happiness
-                m_GameManager.IncrementHappiness(1);
-                m_GameManager.IncrementMoney(1);
+                m_GameManager.IncrementHappiness(m_GameManager.m_HappinessForCompletingAStation);
+                m_GameManager.IncrementMoney(m_GameManager.m_MoneyGainWhenReachStation);
 
                 if (m_IncreaseToNextStation)
                 {
@@ -78,6 +79,11 @@ public class Train : MonoBehaviour {
                     {
                         m_CurrentStationIndex = m_RouteComp.m_WayPoint.Length - 1;
                         m_IncreaseToNextStation = false;
+
+                        if(m_GameManager && m_GameManager.m_IsGameOver)
+                        {
+                            GameObject.Destroy(gameObject);
+                        }
                     }
                     else
                     {
@@ -90,6 +96,11 @@ public class Train : MonoBehaviour {
                     {
                         m_CurrentStationIndex = 0;
                         m_IncreaseToNextStation = true;
+
+                        if (m_GameManager && m_GameManager.m_IsGameOver)
+                        {
+                            GameObject.Destroy(gameObject);
+                        }
                     }
                     else
                     {
@@ -120,7 +131,7 @@ public class Train : MonoBehaviour {
                 m_Collidied = true;
                 m_CollidiedWith = other;
                 // Langa
-                m_GameManager.IncrementHappiness(-5);
+                m_GameManager.IncrementHappiness(m_GameManager.m_HappinessForTrainSlowdown);
             }
         }
     }
@@ -139,7 +150,7 @@ public class Train : MonoBehaviour {
         GameObject.Destroy(gameObject);
 
         // if not break down,
-        m_GameManager.IncrementMoney(-10);
+        m_GameManager.IncrementMoney(m_GameManager.m_MoneyLostForPullingATrainOutOfService);
     }
 
     private int GetNextStationIndex()

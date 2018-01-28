@@ -18,6 +18,7 @@ TagManager:
   - STCW
   - BPLRT
   - NotAStation
+  - lineSpawner
   layers:
   - Default
   - TransparentFX

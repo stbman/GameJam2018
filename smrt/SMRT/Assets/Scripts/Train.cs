@@ -10,6 +10,7 @@ public class Train : MonoBehaviour {
     public int m_CurrentStationIndex = 0;
     public bool m_IncreaseToNextStation = true;
 
+    public Spawner      m_LineSpawner;
     private GameObject  m_RouteMaster;
     private RouteScript m_RouteComp;
     private Renderer    m_Renderer;
@@ -42,6 +43,11 @@ public class Train : MonoBehaviour {
         {
             return;
         }
+
+        if (!m_GameManager.m_StartingTimer.IsElapsed())
+        {
+            GameObject.Destroy(gameObject);
+        }
         
         Vector4 goToVec        = GetGoToVector();
 
@@ -59,19 +65,26 @@ public class Train : MonoBehaviour {
 
                 UpdateTrain(GetCurrentStation() + (goToVec.normalized * m_DistanceTravelled), goToVec);
             }
+            else
+            {
+                m_GameManager.IncrementHappiness(m_GameManager.m_HappinessForActiveCollision * Time.deltaTime);
+            }
         }
         // wait at station
         else
         {
             m_TimeInStation += Time.deltaTime;
             if (   m_TimeInStation >= m_TimeToWaitInStation
-                || NeedToWaitAtStation())
+                || DonNeedToWaitAtStation())
             {
                 m_DistanceTravelled = 0.0f;
                 m_TimeInStation = 0.0f;
                 // Reach station increase happiness
-                m_GameManager.IncrementHappiness(m_GameManager.m_HappinessForCompletingAStation);
-                m_GameManager.IncrementMoney(m_GameManager.m_MoneyGainWhenReachStation);
+                if (!m_GameManager.m_DaysTimer.IsElapsed())
+                {
+                    m_GameManager.IncrementHappiness(m_GameManager.m_HappinessForCompletingAStation);
+                    m_GameManager.IncrementMoney(m_GameManager.m_MoneyGainWhenReachStation);
+                }
 
                 if (m_IncreaseToNextStation)
                 {
@@ -80,9 +93,11 @@ public class Train : MonoBehaviour {
                         m_CurrentStationIndex = m_RouteComp.m_WayPoint.Length - 1;
                         m_IncreaseToNextStation = false;
 
-                        if(m_GameManager && m_GameManager.m_IsGameOver)
+                        if(    m_GameManager.m_IsGameOver
+                            || m_GameManager.m_DaysTimer.IsElapsed())
                         {
                             GameObject.Destroy(gameObject);
+                            m_LineSpawner.m_SpawnedTrain -= 1;
                         }
                     }
                     else
@@ -97,9 +112,11 @@ public class Train : MonoBehaviour {
                         m_CurrentStationIndex = 0;
                         m_IncreaseToNextStation = true;
 
-                        if (m_GameManager && m_GameManager.m_IsGameOver)
+                        if(    m_GameManager.m_IsGameOver
+                            || m_GameManager.m_DaysTimer.IsElapsed())
                         {
                             GameObject.Destroy(gameObject);
+                            m_LineSpawner.m_SpawnedTrain -= 1;
                         }
                     }
                     else
@@ -148,6 +165,7 @@ public class Train : MonoBehaviour {
     void OnMouseDown()
     {
         GameObject.Destroy(gameObject);
+        m_LineSpawner.m_SpawnedTrain -= 1;
 
         // if not break down,
         m_GameManager.IncrementMoney(m_GameManager.m_MoneyLostForPullingATrainOutOfService);
@@ -163,8 +181,13 @@ public class Train : MonoBehaviour {
         return m_RouteComp.m_WayPoint[m_CurrentStationIndex].transform.position;
     }
 
-    private bool NeedToWaitAtStation()
+    private bool DonNeedToWaitAtStation()
     {
+        bool forcedGo = m_GameManager.m_IsGameOver || m_GameManager.m_DaysTimer.IsElapsed();
+        if (forcedGo)
+        {
+            return true;
+        }
         return m_RouteComp.m_WayPoint[GetNextStationIndex()].tag == "NotAStation";
     }
     private Vector4 GetNextStation()
@@ -181,11 +204,13 @@ public class Train : MonoBehaviour {
 
     private void UpdateTrain(Vector4 position, Vector4 lookAt)
     {
-        m_LookAtCache = (m_LookAtCache * 0.9f) + (lookAt.normalized * 0.1f);
+        float blendWeight = 0.2f;
+        float stayWeight = 1.0f - blendWeight;
+        m_LookAtCache = (m_LookAtCache * stayWeight) + (lookAt.normalized * blendWeight);
         Vector3 upVec = new Vector3(0.0f, 0.0f, 1.0f);
         Vector3 rightVec = Vector3.Cross(upVec, lookAt.normalized) *0.02f;
         Vector3 v3Position = position;
-        gameObject.transform.position = (gameObject.transform.position * 0.9f) + ((v3Position + rightVec) * 0.1f);
+        gameObject.transform.position = (gameObject.transform.position * stayWeight) + ((v3Position + rightVec) * blendWeight);
         gameObject.transform.rotation = Quaternion.LookRotation(m_LookAtCache); ;
     }
 }

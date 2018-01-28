@@ -20,11 +20,13 @@ public class CameraControl : MonoBehaviour
 	private Vector3 m_DesiredPosition;              // The position the camera is moving towards. It will be average of all m_Targets positions
 	private Vector3 m_MousePosition;
 	public float m_MouseFollowSpeed = 0.1f;
+	private Vector3 m_CachedStartingPosition;
 
 	private void Awake ()
 	{
 		m_Camera = GetComponentInChildren<Camera> ();
 		m_DesiredPosition = transform.position;
+		m_CachedStartingPosition = transform.position;
 	}
 
 
@@ -55,9 +57,13 @@ public class CameraControl : MonoBehaviour
 	void FindMousePosition () {
         if (Input.GetMouseButton(1)) {
             m_MousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
-			m_DesiredPosition = Vector2.Lerp(m_DesiredPosition, m_MousePosition, m_MouseFollowSpeed);
+			m_DesiredPosition = Vector3.Lerp(m_DesiredPosition, new Vector3(m_MousePosition.x, m_MousePosition.y, m_CachedStartingPosition.z/2.0f), m_MouseFollowSpeed);
 
         }
+		else
+		{
+			m_DesiredPosition = Vector3.Lerp(m_DesiredPosition, new Vector3(m_DesiredPosition.x, m_DesiredPosition.y, m_CachedStartingPosition.z), m_MouseFollowSpeed);
+		}
     }
 
 	void UpdateMouseScroll()

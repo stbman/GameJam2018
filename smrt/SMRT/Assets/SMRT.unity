@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4618,35 +4618,6 @@ Prefab:
     - target: {fileID: 224362145712840430, guid: 53e475fb589a9354c8c93bec58248db5,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224684591237994176, guid: 53e475fb589a9354c8c93bec58248db5,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.30910808
-      objectReference: {fileID: 0}
-    - target: {fileID: 224877151183181826, guid: 53e475fb589a9354c8c93bec58248db5,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.17783095
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969688021054918, guid: 53e475fb589a9354c8c93bec58248db5,
-        type: 2}
-      propertyPath: m_UiScaleMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922914136934648, guid: 53e475fb589a9354c8c93bec58248db5, type: 2}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17795,6 +17766,11 @@ Prefab:
       objectReference: {fileID: 1497279640}
     - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
         type: 2}
+      propertyPath: m_GameOverPanel
+      value: 
+      objectReference: {fileID: 176977686}
+    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
+        type: 2}
       propertyPath: m_DaysText
       value: 
       objectReference: {fileID: 1830124418}
@@ -17813,31 +17789,6 @@ Prefab:
       propertyPath: m_StartingTimerPanel
       value: 
       objectReference: {fileID: 498313162}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
-      propertyPath: m_GameOverPanel
-      value: 
-      objectReference: {fileID: 176977686}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
-      propertyPath: m_HappinessForTrainSlowdown
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
-      propertyPath: m_HappinessForCompletingAStation
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
-      propertyPath: m_MoneyLostForPullingATrainOutOfService
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114293857328442062, guid: cb130a10050fd4b4fbfc1e05da59c097,
-        type: 2}
-      propertyPath: m_HappinessForActiveCollision
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb130a10050fd4b4fbfc1e05da59c097, type: 2}
   m_IsPrefabParent: 0
@@ -19441,7 +19392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993115670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41161677, y: 0.13447055, z: -0.46060514}
+  m_LocalPosition: {x: 0.44, y: 0.13447055, z: -0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 391654701}

@@ -9,6 +9,7 @@ public class Train : MonoBehaviour {
     public float m_TimeToWaitInStation = 0.0f;
     public int m_CurrentStationIndex = 0;
     public bool m_IncreaseToNextStation = true;
+    public AudioSource m_SuccessSound;
 
     public Spawner      m_LineSpawner;
     private GameObject  m_RouteMaster;
@@ -169,6 +170,11 @@ public class Train : MonoBehaviour {
 
         // if not break down,
         m_GameManager.IncrementMoney(m_GameManager.m_MoneyLostForPullingATrainOutOfService);
+
+        if(m_SuccessSound)
+        {
+            m_SuccessSound.Play();
+        }
     }
 
     private int GetNextStationIndex()

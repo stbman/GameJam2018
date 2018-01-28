@@ -94,6 +94,14 @@ public class SMRTGameManager : MonoBehaviour
         m_DaysTimer.StartTimer(m_DaysDuration);
         m_StartingTimerPanel.active = false;
         m_GameOverPanel.active = false;
+
+        GameObject[] trains = GameObject.FindGameObjectsWithTag("Train");
+        for(int i = 0; i < trains.Length; i++)
+        {
+            Train trainscript =trains[i].GetComponent<Train>();
+            trainscript.m_LineSpawner.m_SpawnedTrain -= 1;
+            Destroy(trains[i]);
+        }
     }
 
     void GameOver()

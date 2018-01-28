@@ -19,6 +19,7 @@ TagManager:
   - BPLRT
   - NotAStation
   - lineSpawner
+  - Train
   layers:
   - Default
   - TransparentFX
